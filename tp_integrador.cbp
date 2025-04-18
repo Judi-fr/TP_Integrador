@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="tp_integrador" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/tp_integrador" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/tp_integrador" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="1_clsSuscripcion.h" />
+		<Unit filename="1_metodosSuscripciones.cpp" />
+		<Unit filename="2_clsArchivos.h" />
+		<Unit filename="2_metodosArchivos.cpp" />
+		<Unit filename="3_clsCancion.h" />
+		<Unit filename="3_metodosCanciones.cpp" />
+		<Unit filename="4_clsAccesos.h" />
+		<Unit filename="4_metodosAccesos.cpp" />
+		<Unit filename="clsArchivos.h" />
+		<Unit filename="clsCancion.h" />
+		<Unit filename="clsSuscripcion.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="metodosSuscripciones.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
