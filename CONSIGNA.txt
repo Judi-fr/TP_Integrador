@@ -1,0 +1,65 @@
+APLICACION DE MUSICA
+
+Se necesita crear una aplicación para que aquellas personas que se suscriban puedan acceder a las canciones registradas en el sistema.
+Se pretende llevar el registro de los suscriptores, las canciones y los accesos de los suscriptores a las canciones.
+Por cada uno de los suscriptores se quiere registrar el DNI, el nombre, el apellido, un número de teléfono, un email y la fecha de nacimiento.
+Se quiere que a cada una de las personas que se suscriba se le asigne un número único para identificarlo,
+y que ese número sea correlativo (primer suscriptor 1, segundo 2, etc.)
+Para cada canción se registra un número de identificación único, el nombre de la canción, el nombre del autor, el nombre del intérprete y la fecha de publicación.
+Para los accesos, a la aplicación le interesa saber cuál es canción que se escuchó, qué suscriptor lo hizo, y cuál fue la fecha y hora.
+A partir de la descripción se pide:
+
+-------------------------------------------------------------------------------------------------------------------------
+el que esta suscripto tiene que poder acceder a las canciones
+
+-Log In (clase suscripciones) (clase archivo_suscripciones) (email && contraseña)
+-Suscribirse (clase suscripciones) (clase archivo_suscripciones) (cargar datos de suscripciones y guardarlos en archivos)
+-Mi Perfil (muestra todos los datos dentro de la clase suscripciones)
+-Lista de canciones (clase canciones)(clase archivo_canciones)
+-Historial (clase archivo_acceso) (objeto suscripciones) (objeto canciones)
+
+-------------------------------------------------------------------------------------------------------------------------
+
+APLICACION DE MUSICA
+
+de Listado de temas para desarrollar el TPIURL
+
+Ezequiel Rieznik legajo 25664
+Bautista Lorenzo Lopez legajo 28265
+Matias Romero Obelar legajo 30581
+
+
+
+clases Suscripciones-----------------------
+private: 
+int numero;
+int dni;
+char/string nombre;
+char/string apellido;
+int telefono;
+char/string email;
+int fecha[3];
+char contraseña;
+
+clase Archivos------------------------------ 
+
+private: 
+char/string nombreArchi;
+
+class cancion-------------------------------
+ 
+
+private:
+int numero;
+char/string nombre;
+char/string autor;
+char/string interprete;
+int fecha[3];
+
+class accesos------------------------------- 
+
+
+private: 
+char/string cancion; 
+char/string suscriptor;
+int fecha[3];
