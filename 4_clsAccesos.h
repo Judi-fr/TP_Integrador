@@ -1,12 +1,14 @@
-#ifndef 4_CLSACCESOS_H_INCLUDED
-#define 4_CLSACCESOS_H_INCLUDED
+#ifndef CLSACCESOS_H_INCLUDED
+#define CLSACCESOS_H_INCLUDED
 #include <cstring>
+#include "Fecha.h"
 
 class Accesos{
     private:
-    std::string cancion;
-    std::string suscriptor;
-    int fecha[3];
+    char cancion;
+    char suscriptor;
+    Fecha diaEscuchado;
+
     public:
         ///metodos
 };

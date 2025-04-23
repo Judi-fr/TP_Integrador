@@ -2,3 +2,45 @@
 1744998047 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\main.cpp
 	<iostream>
 
+1745346728 source:c:\users\ezeri\documents\facultad\tp-integrador\2_metodosarchivos.cpp
+
+1745358877 source:c:\users\ezeri\documents\facultad\tp-integrador\3_metodoscanciones.cpp
+	"3_clsCancion.h"
+
+1745358977 source:c:\users\ezeri\documents\facultad\tp-integrador\4_metodosaccesos.cpp
+	"4_clsAccesos.h"
+
+1745440034 source:c:\users\ezeri\documents\facultad\tp-integrador\1_metodossuscripciones.cpp
+	<iostream>
+	<cstring>
+	"1_clsSuscripcion.h"
+	"cargar_cadena.h"
+	"Fecha.h"
+
+1745439108 source:c:\users\ezeri\documents\facultad\tp-integrador\main.cpp
+	<iostream>
+	"1_clsSuscripcion.h"
+
+1745439593 c:\users\ezeri\documents\facultad\tp-integrador\1_clssuscripcion.h
+	<cstring>
+	"Fecha.h"
+
+1745440107 c:\users\ezeri\documents\facultad\tp-integrador\3_clscancion.h
+	<cstring>
+	"Fecha.h"
+
+1745440214 c:\users\ezeri\documents\facultad\tp-integrador\4_clsaccesos.h
+	<cstring>
+	"Fecha.h"
+
+1745288707 source:c:\users\ezeri\documents\facultad\tp-integrador\cargar_cadena.cpp
+	<iostream>
+
+1745288706 c:\users\ezeri\documents\facultad\tp-integrador\fecha.h
+
+1745288707 c:\users\ezeri\documents\facultad\tp-integrador\cargar_cadena.h
+
+1745439117 source:c:\users\ezeri\documents\facultad\tp-integrador\fecha.cpp
+	<iostream>
+	"Fecha.h"
+

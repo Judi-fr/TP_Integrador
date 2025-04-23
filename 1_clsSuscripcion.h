@@ -1,17 +1,38 @@
 #ifndef CLSSUSCRIPCION_H_INCLUDED
 #define CLSSUSCRIPCION_H_INCLUDED
 #include <cstring>
+#include "Fecha.h"
 
 class Suscripcion{
     private:
+        int identificador;
         int dni;
-        std::string nombre;
-        std::string apellido;
+        char nombre[30];
+        char apellido[30];
         int telefono;
-        std::string email;
-        int fecha[3];
+        char email[30];
+        Fecha fechaNacimiento;
     public:
-        ///metodos
+        Suscripcion(int identificador=1,int dni=0 , const char *nombre ="N/A", const char *apellido="N/A",int telefono=0,const char *email="pepito@hotmail.com",int[]={} );
+
+        void setIdentificador(int );
+        void setDni(int );
+        void setNombre(const char *);
+        void setApellido(const char *);
+        void setTelefono(int );
+        void setEmail(const char *);
+        void setFechaNac(Fecha x);
+
+        int getIdentificador();
+        int getDni();
+        const char *getNombre();
+        const char *getApellido();
+        int getTelefono();
+        const char *getEmail();
+        Fecha getFecha();
+
+        void Cargar();
+        void Mostrar();
 };
 
 
