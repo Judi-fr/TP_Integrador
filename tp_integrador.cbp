@@ -40,11 +40,11 @@
 		<Unit filename="3_metodosCanciones.cpp" />
 		<Unit filename="4_clsAccesos.h" />
 		<Unit filename="4_metodosAccesos.cpp" />
-		<Unit filename="clsArchivos.h" />
-		<Unit filename="clsCancion.h" />
-		<Unit filename="clsSuscripcion.h" />
+		<Unit filename="Fecha.cpp" />
+		<Unit filename="Fecha.h" />
+		<Unit filename="cargar_cadena.cpp" />
+		<Unit filename="cargar_cadena.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="metodosSuscripciones.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
