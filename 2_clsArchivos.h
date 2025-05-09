@@ -1,13 +1,19 @@
 #ifndef CLSARCHIVOS_H_INCLUDED
 #define CLSARCHIVOS_H_INCLUDED
-#include <cstring>
+#include <string>
+#include "1_clsSuscripcion.h"
+#include "3_clsCancion.h"
+#include "4_clsAccesos.h"
 
 class Archivos{
 
     private:
-        std::string nombreArchi;
+        std::string _nombreArchivo;
     public:
-    ///metodos
+    Archivos(std::string );
+    void append(Suscripcion );
+    void append(Cancion );
+    void append(Accesos );
 };
 
 
