@@ -7,25 +7,25 @@
 class Cancion{
 
     private:
-    int numero;
-    std::string nombre;
-    std::string autor;
-    std::string interprete;
-    Fecha fechaPublicacion;
+        int numero;
+        std::string nombre;
+        std::string autor;
+        std::string interprete;
+        Fecha fechaPublicacion;
 
     public:
-    void setNumero(int );
-    void setNombre(std::string );
-    void setAutor(std::string );
-    void setInterprete(std::string );
+        void setNumero(int );
+        void setNombre(const char );
+        void setAutor(const char);
+        void setInterprete(const char );
 
-    int getNumero();
-    std::string getNombre();
-    std::string getAutor();
-    std::string getInterprete();
+        int getNumero();
+        const char* getNombre();
+        const char* getAutor();
+        const char* getInterprete();
 
-    void cargarCancion();
-    void mostrarCancion();
+        void cargarCancion();
+        void mostrarCancion();
 };
 
 

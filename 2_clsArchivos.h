@@ -10,10 +10,16 @@ class Archivos{
     private:
         std::string _nombreArchivo;
     public:
-    Archivos(std::string );
-    void append(Suscripcion );
-    void append(Cancion );
-    void append(Accesos );
+        Archivos(std::string );
+        void append(Suscripcion );
+        void append(Cancion );
+        void append(Accesos );
+
+        Suscripcion leer(int pocision);
+        Cancion leer(int pocision);
+        Accesos leer(int pocision);
+
+
 };
 
 

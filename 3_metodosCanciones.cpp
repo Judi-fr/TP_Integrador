@@ -8,40 +8,37 @@ using namespace std;
 void Cancion::setNumero(int x){
     numero = x;
 }
-void Cancion::setNombre(string x){
-    nombre=x;
+void Cancion::setNombre(const char *x){
+    strcpy(nombre,x);
 }
-void Cancion::setAutor(string x){
-    autor=x;
+void Cancion::setAutor(const charx){
+    strcpy(autor,x);
 }
-void Cancion::setInterprete(string x){
-    interprete=x;
+void Cancion::setInterprete(const char x){
+    strcpy(interprete,x);
 }
 
 int Cancion::getNumero(){
     return numero;
 }
-string Cancion::getNombre(){
+const char Cancion::getNombre(){
     return nombre;
 }
-string Cancion::getAutor(){
+const char* Cancion::getAutor(){
     return autor;
 }
-string Cancion::getInterprete(){
+const char* Cancion::getInterprete(){
     return interprete;
 }
 void Cancion::cargarCancion(){
     cout<<"NUMERO"<<endl;
         cin>>numero;
     cout<<"NOMBRE"<<endl;
-        cin.ignore();
-        getline(cin,nombre);
+        cargarCadena(nombre,30);
     cout<<"AUTOR"<<endl;
-        cin.ignore();
-        getline(cin,autor);
+        cargarCadena(autor,30);
     cout<<"INTERPRETE"<<endl;
-        cin.ignore();
-        getline(cin,interprete);
+        cargarCadena(interprete,30);
 }
 void Cancion::mostrarCancion(){
     cout<<numero<<endl;

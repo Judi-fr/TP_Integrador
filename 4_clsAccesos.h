@@ -2,12 +2,14 @@
 #define CLSACCESOS_H_INCLUDED
 #include <cstring>
 #include "Fecha.h"
+#include "3_clsCancion.h"
+#include "1_clsSuscripcion.h"
 
 class Accesos{
     private:
-    char cancion;
-    char suscriptor;
-    Fecha diaEscuchado;
+        Cancion cancion;
+        Suscripcion suscriptor;
+        Fecha diaEscuchado;
 
     public:
         ///metodos

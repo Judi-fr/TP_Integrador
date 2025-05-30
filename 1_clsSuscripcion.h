@@ -7,10 +7,10 @@ class Suscripcion{
     private:
         int identificador;
         int dni;
-        std::string nombre;
-        std::string apellido;
+        char nombre[30];
+        char apellido[30];
         int telefono;
-        std::string email;
+        char email[30];
         Fecha fechaNacimiento;
     public:
         Suscripcion(int identificador=1,int dni=0 , std::string nombre ="N/A", std::string apellido="N/A",int telefono=0,std::string email="pepito@hotmail.com",int[]={} );
@@ -25,10 +25,10 @@ class Suscripcion{
 
         int getIdentificador();
         int getDni();
-        std::string getNombre();
-        std::string getApellido();
+        char *getNombre();
+        char *getApellido();
         int getTelefono();
-        std::string getEmail();
+        char *getEmail();
         Fecha getFecha();
 
         void Cargar();

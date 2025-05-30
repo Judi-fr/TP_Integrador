@@ -2,6 +2,7 @@
 ///METODOS
 #include <iostream>
 #include <cstring>
+#include <string>
 #include "1_clsSuscripcion.h"
 #include "Fecha.h"
 
@@ -14,16 +15,16 @@ void Suscripcion::setDni(int x){
     dni = x;
 }
 void Suscripcion::setNombre(string x){
-    nombre=x;
+    strcpy(nombre,x.c_str());
 }
 void Suscripcion::setApellido(string x){
-    apellido=x;
+    strcpy(apellido,x.c_str());
 }
 void Suscripcion::setTelefono(int x){
     telefono = x;
 }
 void Suscripcion::setEmail(string x){
-    email=x;
+    strcpy(email,x.c_str());
 }
 void Suscripcion::setFechaNac(Fecha x){
     fechaNacimiento = x;
@@ -34,16 +35,16 @@ int Suscripcion::getIdentificador(){
 int Suscripcion::getDni(){
     return dni;
 }
-string Suscripcion::getNombre(){
+char* Suscripcion::getNombre(){
     return nombre;
 }
-string Suscripcion::getApellido(){
+char* Suscripcion::getApellido(){
     return apellido;
 }
 int Suscripcion::getTelefono(){
     return telefono;
 }
-string Suscripcion::getEmail(){
+char* Suscripcion::getEmail(){
     return email;
 }
 Fecha Suscripcion::getFecha(){

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1745695676 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\main.cpp
+1747937770 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\main.cpp
 	<iostream>
 	"1_clsSuscripcion.h"
 
@@ -57,7 +57,7 @@
 	"cargar_cadena.h"
 	"Fecha.h"
 
-1745695676 c:\users\pc\documents\tp_musica_facu\tp_integrador\1_clssuscripcion.h
+1747945764 c:\users\pc\documents\tp_musica_facu\tp_integrador\1_clssuscripcion.h
 	<cstring>
 	"Fecha.h"
 
@@ -65,25 +65,46 @@
 
 1745695676 c:\users\pc\documents\tp_musica_facu\tp_integrador\cargar_cadena.h
 
-1744999457 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\2_metodosarchivos.cpp
+1747937770 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\2_metodosarchivos.cpp
+	<iostream>
+	"2_clsArchivos.h"
 
-1745695676 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\3_metodoscanciones.cpp
+1747937770 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\3_metodoscanciones.cpp
 	"3_clsCancion.h"
-
-1745695676 c:\users\pc\documents\tp_musica_facu\tp_integrador\3_clscancion.h
 	<cstring>
+	<string>
+	<iostream>
+
+1748561049 c:\users\pc\documents\tp_musica_facu\tp_integrador\3_clscancion.h
+	<cstring>
+	<string>
 	"Fecha.h"
 
-1745695676 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\4_metodosaccesos.cpp
+1747937770 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\4_metodosaccesos.cpp
 	"4_clsAccesos.h"
 
-1745695676 c:\users\pc\documents\tp_musica_facu\tp_integrador\4_clsaccesos.h
+1748561133 c:\users\pc\documents\tp_musica_facu\tp_integrador\4_clsaccesos.h
 	<cstring>
 	"Fecha.h"
+	"3_clsCancion.h"
+	"1_clsSuscripcion.h"
 
 1746764405 c:\users\ezeri\documents\facultad\tp-integrador\2_clsarchivos.h
 	<cstring>
 	"1_clsSuscripcion.h"
 	"3_clsCancion.h"
 	"4_clsAccesos.h"
+
+1747945383 c:\users\pc\documents\tp_musica_facu\tp_integrador\2_clsarchivos.h
+	<string>
+	"1_clsSuscripcion.h"
+	"3_clsCancion.h"
+	"4_clsAccesos.h"
+
+1745695676 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\cargar_cadena.cpp
+	<iostream>
+
+1745695676 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\fecha.cpp
+	<iostream>
+	"Fecha.h"
 
