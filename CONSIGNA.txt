@@ -19,8 +19,8 @@ el que esta suscripto tiene que poder acceder a las canciones
 -Historial (clase archivo_acceso) (objeto suscripciones) (objeto canciones)
 ------------------------------------------------------------------------------------------------------------------------
 POR HACER (pongan nombre al lado de la tarea de quien lo hizo)
--cambiar todos los strings por chars de el private de la clase cancion y sus metodos  
--crear metodo de clase accesos donde se carga la objeto con el suscriptor, la cancion y fecha del acceso, se envia como parametro
+-2)Suscribirse
+-crear metodo de clase accesos donde se carga el objeto con el suscriptor, la cancion y fecha del acceso, enviados como parametro
 
 -------------------------------------------------------------------------------------------------------------------------
 
