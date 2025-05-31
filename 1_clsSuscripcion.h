@@ -10,26 +10,28 @@ class Suscripcion{
         char nombre[30];
         char apellido[30];
         int telefono;
-        char email[40];
-        char contrasenia[40];
+        char email[50];
+        char contrasenia[50];
         Fecha fechaNacimiento;
     public:
-        Suscripcion(int identificador=1,int dni=0 , std::string nombre ="N/A", std::string apellido="N/A",int telefono=0,std::string email="pepito@hotmail.com",int[]={} );
+        Suscripcion();
 
         void setIdentificador(int );
         void setDni(int );
-        void setNombre(std::string );
-        void setApellido(std::string );
+        void setNombre(const char * );
+        void setApellido(const char * );
         void setTelefono(int );
-        void setEmail(std::string );
+        void setEmail();
+        void setContrasenia();
         void setFechaNac(Fecha x);
 
         int getIdentificador();
         int getDni();
-        char *getNombre();
-        char *getApellido();
+        const char *getNombre();
+        const char *getApellido();
         int getTelefono();
-        char *getEmail();
+        const char *getEmail();
+        const char *getContrasenia();
         Fecha getFecha();
 
         void Cargar();

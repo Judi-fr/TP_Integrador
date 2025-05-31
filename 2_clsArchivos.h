@@ -11,6 +11,7 @@ class Archivos{
         std::string _nombreArchivo;
     public:
         Archivos(std::string );
+        Archivos();
         void append(Suscripcion );
         void append(Cancion );
         void append(Accesos );
@@ -19,7 +20,9 @@ class Archivos{
         Cancion leerCancion(int pocision);
         Accesos leerAcceso(int pocision);
 
-        ///int CantidadRegistros();
+        int CantidadRegis_susc();
+        int CantidadRegis_acces();
+        int CantidadRegis_canc();
 
 
 

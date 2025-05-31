@@ -4,6 +4,9 @@
 Archivos::Archivos(std::string nombre){
     _nombreArchivo=nombre;
 }
+Archivos::Archivos(){
+
+}
 
 ///APPEND///////////////////////////////////////////////////////////////
 void Archivos::append(Suscripcion suscripcion){
@@ -34,8 +37,6 @@ void Archivos::append(Accesos acceso){
     return;
 }
 
-///////////////////////////////////////////////////////////////////////////
-
 ///LEER/////////////////////////////////////////////////////////////////
 Suscripcion Archivos::leerSuscripcion(int pocision){
     FILE *pArchivo = fopen("Suscripciones.dat","rb");
@@ -45,6 +46,7 @@ Suscripcion Archivos::leerSuscripcion(int pocision){
     }
     fseek(pArchivo,sizeof(Suscripcion)*pocision,0);
     fread(&suscripcion,sizeof(Suscripcion),1,pArchivo);
+    fclose(pArchivo);
     return suscripcion;
 }
 Cancion Archivos::leerCancion(int pocision){
@@ -55,6 +57,7 @@ Cancion Archivos::leerCancion(int pocision){
     }
     fseek(pArchivo,sizeof(Cancion)*pocision,0);
     fread(&knCion,sizeof(Cancion),1,pArchivo);
+    fclose(pArchivo);
     return knCion;
 }
 Accesos Archivos::leerAcceso(int pocision){
@@ -65,10 +68,49 @@ Accesos Archivos::leerAcceso(int pocision){
     }
     fseek(pArchivo,sizeof(Accesos)*pocision,0);
     fread(&Axes,sizeof(Accesos),1,pArchivo);
+    fclose(pArchivo);
     return Axes;
 }
-///////////////////////////////////////////////////////////////////////////
 
 ///CANTIDAD-REGISTROS//////////////////////////////////////////////////
 
+int Archivos::CantidadRegis_susc(){
+    Suscripcion suscripcion;
+    int bytes;
+
+    FILE *pArchivo = fopen("Suscripciones.dat","rb");
+    if (pArchivo == nullptr){
+        return 99;
+    }
+    fseek(pArchivo,0,2);
+    bytes=ftell(pArchivo);
+    fclose(pArchivo);
+    return bytes / sizeof(Suscripcion);
+}
+
+int Archivos::CantidadRegis_acces(){
+    int bytes;
+    FILE *pArchivo = fopen("Accesos.dat","rb");
+
+    if (pArchivo == nullptr){
+        return 99;
+    }
+    fseek(pArchivo,0,2);
+    bytes=ftell(pArchivo);
+    fclose(pArchivo);
+    return bytes / sizeof(Accesos);
+}
+
+int Archivos::CantidadRegis_canc(){
+    int bytes;
+    FILE *pArchivo = fopen("Canciones.dat","rb");
+
+    if (pArchivo == nullptr){
+        return 99;
+    }
+    fseek(pArchivo,0,2);
+    bytes=ftell(pArchivo);
+    fclose(pArchivo);
+    return bytes / sizeof(Cancion);
+}
 //////////////////////////////////////////////////////////////////////////

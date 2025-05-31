@@ -1,5 +1,7 @@
 #include <iostream>
+#include "funciones_main.h"
 #include "1_clsSuscripcion.h"
+
 
 using namespace std;
 
@@ -22,6 +24,7 @@ int main()
         cin>>opcion;
         switch(opcion){
             case 1:
+                login();
                 system("cls");
                 break;
             case 2:

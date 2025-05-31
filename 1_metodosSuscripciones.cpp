@@ -8,23 +8,31 @@
 
 using namespace std;
 
+Suscripcion::Suscripcion(){
+}
+
 void Suscripcion::setIdentificador(int x){
     identificador = x;
 }
 void Suscripcion::setDni(int x){
     dni = x;
 }
-void Suscripcion::setNombre(string x){
-    strcpy(nombre,x.c_str());
+void Suscripcion::setNombre(const char * x){
+    strcpy(nombre,x);
 }
-void Suscripcion::setApellido(string x){
-    strcpy(apellido,x.c_str());
+void Suscripcion::setApellido(const char * x){
+    strcpy(apellido,x);
 }
 void Suscripcion::setTelefono(int x){
     telefono = x;
 }
-void Suscripcion::setEmail(string x){
-    strcpy(email,x.c_str());
+void Suscripcion::setEmail(){
+    cin.ignore();
+    cin.getline(email,50);
+}
+void Suscripcion::setContrasenia(){
+    cin.ignore();
+    cin.getline(contrasenia,50);
 }
 void Suscripcion::setFechaNac(Fecha x){
     fechaNacimiento = x;
@@ -35,17 +43,20 @@ int Suscripcion::getIdentificador(){
 int Suscripcion::getDni(){
     return dni;
 }
-char* Suscripcion::getNombre(){
+const char* Suscripcion::getNombre(){
     return nombre;
 }
-char* Suscripcion::getApellido(){
+const char* Suscripcion::getApellido(){
     return apellido;
 }
 int Suscripcion::getTelefono(){
     return telefono;
 }
-char* Suscripcion::getEmail(){
+const char* Suscripcion::getEmail(){
     return email;
+}
+const char *Suscripcion::getContrasenia(){
+    return contrasenia;
 }
 Fecha Suscripcion::getFecha(){
     return fechaNacimiento;
@@ -65,6 +76,9 @@ void Suscripcion::Cargar(){
     cout<<"INGRESA TU EMAIL: ";
     cin.ignore();
     cin.getline(email,50);
+    cout<<"INGRESA CONTRASENIA: ";
+    cin.ignore();
+    cin.getline(contrasenia,50);
     cout<<"INGRESA TU FECHA DE NACIMIENTO: ";
     fechaNacimiento.Cargar();
 }
