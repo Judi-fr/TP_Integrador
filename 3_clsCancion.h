@@ -8,16 +8,16 @@ class Cancion{
 
     private:
         int numero;
-        std::string nombre;
-        std::string autor;
-        std::string interprete;
+        char nombre[50];
+        char autor[50];
+        char interprete[50];
         Fecha fechaPublicacion;
 
     public:
         void setNumero(int );
-        void setNombre(const char );
-        void setAutor(const char);
-        void setInterprete(const char );
+        void setNombre(const char* );
+        void setAutor(const char* );
+        void setInterprete(const char* );
 
         int getNumero();
         const char* getNombre();

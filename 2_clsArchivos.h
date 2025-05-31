@@ -15,9 +15,13 @@ class Archivos{
         void append(Cancion );
         void append(Accesos );
 
-        Suscripcion leer(int pocision);
-        Cancion leer(int pocision);
-        Accesos leer(int pocision);
+        Suscripcion leerSuscripcion(int pocision);
+        Cancion leerCancion(int pocision);
+        Accesos leerAcceso(int pocision);
+
+        ///int CantidadRegistros();
+
+
 
 
 };

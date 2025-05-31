@@ -56,15 +56,15 @@ void Suscripcion::Cargar(){
     cin>>dni;
     cout<<"INGRESA TU NOMBRE: ";
     cin.ignore();
-    getline(cin,nombre);
+    cin.getline(nombre,30);
     cout<<"INGRESA TU APELLIDO: ";
     cin.ignore();
-    getline(cin,apellido);
+    cin.getline(apellido,30);
     cout<<"INGRESA TU TELEFONO: ";
     cin>>telefono;
     cout<<"INGRESA TU EMAIL: ";
     cin.ignore();
-    getline(cin,email);
+    cin.getline(email,50);
     cout<<"INGRESA TU FECHA DE NACIMIENTO: ";
     fechaNacimiento.Cargar();
 }

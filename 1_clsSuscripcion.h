@@ -10,7 +10,8 @@ class Suscripcion{
         char nombre[30];
         char apellido[30];
         int telefono;
-        char email[30];
+        char email[40];
+        char contrasenia[40];
         Fecha fechaNacimiento;
     public:
         Suscripcion(int identificador=1,int dni=0 , std::string nombre ="N/A", std::string apellido="N/A",int telefono=0,std::string email="pepito@hotmail.com",int[]={} );

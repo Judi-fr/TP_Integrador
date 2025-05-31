@@ -11,17 +11,17 @@ void Cancion::setNumero(int x){
 void Cancion::setNombre(const char *x){
     strcpy(nombre,x);
 }
-void Cancion::setAutor(const charx){
+void Cancion::setAutor(const char *x){
     strcpy(autor,x);
 }
-void Cancion::setInterprete(const char x){
+void Cancion::setInterprete(const char *x){
     strcpy(interprete,x);
 }
 
 int Cancion::getNumero(){
     return numero;
 }
-const char Cancion::getNombre(){
+const char* Cancion::getNombre(){
     return nombre;
 }
 const char* Cancion::getAutor(){
@@ -32,13 +32,16 @@ const char* Cancion::getInterprete(){
 }
 void Cancion::cargarCancion(){
     cout<<"NUMERO"<<endl;
-        cin>>numero;
+    cin>>numero;
     cout<<"NOMBRE"<<endl;
-        cargarCadena(nombre,30);
+    cin.ignore();
+    cin.getline(nombre,50);
     cout<<"AUTOR"<<endl;
-        cargarCadena(autor,30);
+    cin.ignore();
+    cin.getline(autor,50);
     cout<<"INTERPRETE"<<endl;
-        cargarCadena(interprete,30);
+    cin.ignore();
+    cin.getline(interprete,50);
 }
 void Cancion::mostrarCancion(){
     cout<<numero<<endl;

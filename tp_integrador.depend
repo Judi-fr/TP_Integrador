@@ -3,11 +3,11 @@
 	<iostream>
 	"1_clsSuscripcion.h"
 
-1746763393 source:c:\users\ezeri\documents\facultad\tp-integrador\2_metodosarchivos.cpp
+1748658419 source:c:\users\ezeri\documents\facultad\tp-integrador\2_metodosarchivos.cpp
 	<iostream>
 	"2_clsArchivos.h"
 
-1746766039 source:c:\users\ezeri\documents\facultad\tp-integrador\3_metodoscanciones.cpp
+1748664858 source:c:\users\ezeri\documents\facultad\tp-integrador\3_metodoscanciones.cpp
 	"3_clsCancion.h"
 	<cstring>
 	<string>
@@ -16,28 +16,31 @@
 1745358977 source:c:\users\ezeri\documents\facultad\tp-integrador\4_metodosaccesos.cpp
 	"4_clsAccesos.h"
 
-1746766448 source:c:\users\ezeri\documents\facultad\tp-integrador\1_metodossuscripciones.cpp
+1748663621 source:c:\users\ezeri\documents\facultad\tp-integrador\1_metodossuscripciones.cpp
 	<iostream>
 	<cstring>
+	<string>
 	"1_clsSuscripcion.h"
 	"Fecha.h"
 
-1745439108 source:c:\users\ezeri\documents\facultad\tp-integrador\main.cpp
+1748658419 source:c:\users\ezeri\documents\facultad\tp-integrador\main.cpp
 	<iostream>
 	"1_clsSuscripcion.h"
 
-1746766429 c:\users\ezeri\documents\facultad\tp-integrador\1_clssuscripcion.h
+1748663621 c:\users\ezeri\documents\facultad\tp-integrador\1_clssuscripcion.h
 	<cstring>
 	"Fecha.h"
 
-1746766068 c:\users\ezeri\documents\facultad\tp-integrador\3_clscancion.h
+1748662694 c:\users\ezeri\documents\facultad\tp-integrador\3_clscancion.h
 	<cstring>
 	<string>
 	"Fecha.h"
 
-1745440214 c:\users\ezeri\documents\facultad\tp-integrador\4_clsaccesos.h
+1748658419 c:\users\ezeri\documents\facultad\tp-integrador\4_clsaccesos.h
 	<cstring>
 	"Fecha.h"
+	"3_clsCancion.h"
+	"1_clsSuscripcion.h"
 
 1745288707 source:c:\users\ezeri\documents\facultad\tp-integrador\cargar_cadena.cpp
 	<iostream>
@@ -46,7 +49,7 @@
 
 1745288707 c:\users\ezeri\documents\facultad\tp-integrador\cargar_cadena.h
 
-1745439117 source:c:\users\ezeri\documents\facultad\tp-integrador\fecha.cpp
+1748658419 source:c:\users\ezeri\documents\facultad\tp-integrador\fecha.cpp
 	<iostream>
 	"Fecha.h"
 
@@ -89,8 +92,8 @@
 	"3_clsCancion.h"
 	"1_clsSuscripcion.h"
 
-1746764405 c:\users\ezeri\documents\facultad\tp-integrador\2_clsarchivos.h
-	<cstring>
+1748662132 c:\users\ezeri\documents\facultad\tp-integrador\2_clsarchivos.h
+	<string>
 	"1_clsSuscripcion.h"
 	"3_clsCancion.h"
 	"4_clsAccesos.h"
