@@ -12,7 +12,8 @@ class Accesos{
         Fecha diaEscuchado;
 
     public:
-        ///metodos
+        Accesos(Cancion , Suscripcion , Fecha );
+        Accesos();
 };
 
 

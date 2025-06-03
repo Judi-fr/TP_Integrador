@@ -12,6 +12,7 @@ class Suscripcion{
         int telefono;
         char email[50];
         char contrasenia[50];
+        bool logeado = false;
         Fecha fechaNacimiento;
     public:
         Suscripcion();
@@ -21,8 +22,9 @@ class Suscripcion{
         void setNombre(const char * );
         void setApellido(const char * );
         void setTelefono(int );
-        void setEmail();
-        void setContrasenia();
+        void setEmail(const char *);
+        void setContrasenia(const char *);
+        void setLogeado(bool );
         void setFechaNac(Fecha x);
 
         int getIdentificador();
@@ -32,9 +34,13 @@ class Suscripcion{
         int getTelefono();
         const char *getEmail();
         const char *getContrasenia();
+        bool getLogeado();
         Fecha getFecha();
 
         void Cargar();
+        void cargarEmail();
+        void cargarContrasenia();
+
         void Mostrar();
 };
 

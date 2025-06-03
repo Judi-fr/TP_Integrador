@@ -1,4 +1,5 @@
 #include "3_clsCancion.h"
+#include "2_clsArchivos.h"
 #include <cstring>
 #include <string>
 #include <iostream>
@@ -7,6 +8,9 @@ using namespace std;
 
 void Cancion::setNumero(int x){
     numero = x;
+}
+void Cancion::setReproducciones(int x){
+    reproducciones = x;
 }
 void Cancion::setNombre(const char *x){
     strcpy(nombre,x);
@@ -21,6 +25,9 @@ void Cancion::setInterprete(const char *x){
 int Cancion::getNumero(){
     return numero;
 }
+int Cancion::getReproducciones(){
+    return reproducciones;
+}
 const char* Cancion::getNombre(){
     return nombre;
 }
@@ -31,8 +38,9 @@ const char* Cancion::getInterprete(){
     return interprete;
 }
 void Cancion::cargarCancion(){
-    cout<<"NUMERO"<<endl;
-    cin>>numero;
+    Archivos archivo;
+    numero=archivo.CantidadRegis_canc()+1;
+    cout<<"NUMERO"<<numero<<endl;
     cout<<"NOMBRE"<<endl;
     cin.ignore();
     cin.getline(nombre,50);
@@ -42,10 +50,12 @@ void Cancion::cargarCancion(){
     cout<<"INTERPRETE"<<endl;
     cin.ignore();
     cin.getline(interprete,50);
+    reproducciones=0;
 }
 void Cancion::mostrarCancion(){
     cout<<numero<<endl;
     cout<<"el nombre de la cancion es: "<<nombre<<endl;
     cout<<"el autor es: "<<autor<<endl;
     cout<<"el interprete es: "<<interprete<<endl;
+    cout<<"reproducciones totales: "<<reproducciones<<endl;
 }

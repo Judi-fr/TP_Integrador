@@ -8,6 +8,7 @@ class Cancion{
 
     private:
         int numero;
+        int reproducciones;
         char nombre[50];
         char autor[50];
         char interprete[50];
@@ -15,11 +16,13 @@ class Cancion{
 
     public:
         void setNumero(int );
+        void setReproducciones(int );
         void setNombre(const char* );
         void setAutor(const char* );
         void setInterprete(const char* );
 
         int getNumero();
+        int getReproducciones();
         const char* getNombre();
         const char* getAutor();
         const char* getInterprete();

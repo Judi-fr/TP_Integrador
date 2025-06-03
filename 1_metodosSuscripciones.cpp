@@ -26,13 +26,14 @@ void Suscripcion::setApellido(const char * x){
 void Suscripcion::setTelefono(int x){
     telefono = x;
 }
-void Suscripcion::setEmail(){
-    cin.ignore();
-    cin.getline(email,50);
+void Suscripcion::setEmail(const char *x){
+    strcpy(email,x);
 }
-void Suscripcion::setContrasenia(){
-    cin.ignore();
-    cin.getline(contrasenia,50);
+void Suscripcion::setContrasenia(const char *x){
+    strcpy(contrasenia,x);
+}
+void Suscripcion::setLogeado(bool valor){
+    logeado=valor;
 }
 void Suscripcion::setFechaNac(Fecha x){
     fechaNacimiento = x;
@@ -58,6 +59,10 @@ const char* Suscripcion::getEmail(){
 const char *Suscripcion::getContrasenia(){
     return contrasenia;
 }
+bool Suscripcion::getLogeado(){
+    return logeado;
+}
+
 Fecha Suscripcion::getFecha(){
     return fechaNacimiento;
 }
@@ -82,6 +87,15 @@ void Suscripcion::Cargar(){
     cout<<"INGRESA TU FECHA DE NACIMIENTO: ";
     fechaNacimiento.Cargar();
 }
+void Suscripcion::cargarEmail(){
+    cin.ignore();
+    cin.getline(email,50);
+}
+void Suscripcion::cargarContrasenia(){
+    cin.ignore();
+    cin.getline(contrasenia,50);
+}
+
 void Suscripcion::Mostrar(){
     cout<<nombre<<" "<<apellido<<endl;
     cout<<"Dni: "<<dni<<endl;

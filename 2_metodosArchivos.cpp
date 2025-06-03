@@ -85,7 +85,12 @@ int Archivos::CantidadRegis_susc(){
     fseek(pArchivo,0,2);
     bytes=ftell(pArchivo);
     fclose(pArchivo);
-    return bytes / sizeof(Suscripcion);
+    if(bytes!=0){
+        return bytes / sizeof(Cancion);
+    }
+    else{
+        return 0;
+    }
 }
 
 int Archivos::CantidadRegis_acces(){
@@ -98,7 +103,12 @@ int Archivos::CantidadRegis_acces(){
     fseek(pArchivo,0,2);
     bytes=ftell(pArchivo);
     fclose(pArchivo);
-    return bytes / sizeof(Accesos);
+    if(bytes!=0){
+        return bytes / sizeof(Cancion);
+    }
+    else{
+        return 0;
+    }
 }
 
 int Archivos::CantidadRegis_canc(){
@@ -111,6 +121,11 @@ int Archivos::CantidadRegis_canc(){
     fseek(pArchivo,0,2);
     bytes=ftell(pArchivo);
     fclose(pArchivo);
-    return bytes / sizeof(Cancion);
+    if(bytes!=0){
+        return bytes / sizeof(Cancion);
+    }
+    else{
+        return 0;
+    }
 }
 //////////////////////////////////////////////////////////////////////////
