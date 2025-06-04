@@ -3,6 +3,7 @@
 #include "1_clsSuscripcion.h"
 
 Suscripcion login();
-
+void crearNuevoUsuario();
+void AnimacionCarga(std::string );
 
 #endif // FUNCIONES_MAIN_H_INCLUDED

@@ -58,16 +58,27 @@ int main()
                 break;
             case 1:
                 sus=login();
-                if(sus.getLogeado()==true){
+                system("cls");
+                if(sus.getLogeado()== true){
                     cout<<"Ingrese la fecha de hoy"<<endl;
+                    system("pause");
+                    system("cls");
                     fechaHoy.Cargar();
                 }
                 system("cls");
                 break;
             case 2:
+                crearNuevoUsuario();
                 system("cls");
                 break;
             case 3:
+                if(sus.getLogeado()== true){
+                    sus.Mostrar();
+                    system("pause");
+                    break;
+                }
+                cout<<"Tienes que logearte primero."<<endl;
+                system("pause");
                 system("cls");
                 break;
             case 4:
@@ -83,5 +94,8 @@ int main()
                 break;
             }
         }
+    }
+    if(sus.getLogeado()){
+
     }
 }

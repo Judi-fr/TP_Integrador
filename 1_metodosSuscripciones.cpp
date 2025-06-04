@@ -84,7 +84,7 @@ void Suscripcion::Cargar(){
     cout<<"INGRESA CONTRASENIA: ";
     cin.ignore();
     cin.getline(contrasenia,50);
-    cout<<"INGRESA TU FECHA DE NACIMIENTO: ";
+    cout<<"INGRESA TU FECHA DE NACIMIENTO: "<<endl;
     fechaNacimiento.Cargar();
 }
 void Suscripcion::cargarEmail(){

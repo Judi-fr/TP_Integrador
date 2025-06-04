@@ -80,7 +80,7 @@ int Archivos::CantidadRegis_susc(){
 
     FILE *pArchivo = fopen("Suscripciones.dat","rb");
     if (pArchivo == nullptr){
-        return 99;
+        return 0;
     }
     fseek(pArchivo,0,2);
     bytes=ftell(pArchivo);
@@ -98,7 +98,7 @@ int Archivos::CantidadRegis_acces(){
     FILE *pArchivo = fopen("Accesos.dat","rb");
 
     if (pArchivo == nullptr){
-        return 99;
+        return 0;
     }
     fseek(pArchivo,0,2);
     bytes=ftell(pArchivo);
@@ -116,7 +116,7 @@ int Archivos::CantidadRegis_canc(){
     FILE *pArchivo = fopen("Canciones.dat","rb");
 
     if (pArchivo == nullptr){
-        return 99;
+        return 0;
     }
     fseek(pArchivo,0,2);
     bytes=ftell(pArchivo);

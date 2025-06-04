@@ -24,9 +24,6 @@ class Archivos{
         int CantidadRegis_acces();
         int CantidadRegis_canc();
 
-
-
-
 };
 
 

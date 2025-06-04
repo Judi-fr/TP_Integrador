@@ -4,7 +4,7 @@
 	"funciones_main.h"
 	"1_clsSuscripcion.h"
 
-1748977887 source:c:\users\ezeri\documents\facultad\tp-integrador\2_metodosarchivos.cpp
+1749003504 source:c:\users\ezeri\documents\facultad\tp-integrador\2_metodosarchivos.cpp
 	<iostream>
 	"2_clsArchivos.h"
 
@@ -18,19 +18,19 @@
 1748722162 source:c:\users\ezeri\documents\facultad\tp-integrador\4_metodosaccesos.cpp
 	"4_clsAccesos.h"
 
-1748722161 source:c:\users\ezeri\documents\facultad\tp-integrador\1_metodossuscripciones.cpp
+1749008927 source:c:\users\ezeri\documents\facultad\tp-integrador\1_metodossuscripciones.cpp
 	<iostream>
 	<cstring>
 	<string>
 	"1_clsSuscripcion.h"
 	"Fecha.h"
 
-1748830871 source:c:\users\ezeri\documents\facultad\tp-integrador\main.cpp
+1749008383 source:c:\users\ezeri\documents\facultad\tp-integrador\main.cpp
 	<iostream>
 	"funciones_main.h"
 	"1_clsSuscripcion.h"
 
-1748722399 c:\users\ezeri\documents\facultad\tp-integrador\1_clssuscripcion.h
+1749008642 c:\users\ezeri\documents\facultad\tp-integrador\1_clssuscripcion.h
 	<cstring>
 	"Fecha.h"
 
@@ -52,8 +52,9 @@
 
 1745288707 c:\users\ezeri\documents\facultad\tp-integrador\cargar_cadena.h
 
-1748658419 source:c:\users\ezeri\documents\facultad\tp-integrador\fecha.cpp
+1749008927 source:c:\users\ezeri\documents\facultad\tp-integrador\fecha.cpp
 	<iostream>
+	<windows.h>
 	"Fecha.h"
 
 1748678743 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\1_metodossuscripciones.cpp
@@ -95,7 +96,7 @@
 	"3_clsCancion.h"
 	"1_clsSuscripcion.h"
 
-1748718696 c:\users\ezeri\documents\facultad\tp-integrador\2_clsarchivos.h
+1748987364 c:\users\ezeri\documents\facultad\tp-integrador\2_clsarchivos.h
 	<string>
 	"1_clsSuscripcion.h"
 	"3_clsCancion.h"
@@ -121,12 +122,28 @@
 	<iostream>
 	"funciones_main.h"
 
-1748718696 c:\users\ezeri\documents\facultad\tp-integrador\funciones_main.h
+1749009798 c:\users\ezeri\documents\facultad\tp-integrador\funciones_main.h
 	"1_clsSuscripcion.h"
 
-1748977887 source:c:\users\ezeri\documents\facultad\tp-integrador\funciones_main.cpp
+1749010799 source:c:\users\ezeri\documents\facultad\tp-integrador\funciones_main.cpp
 	<iostream>
+	"rlutil.h"
+	<string>
 	"funciones_main.h"
 	"1_clsSuscripcion.h"
 	"2_clsArchivos.h"
+
+1749009342 c:\users\ezeri\documents\facultad\tp-integrador\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
 

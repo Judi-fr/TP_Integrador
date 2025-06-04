@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 #include "Fecha.h"
 
 using namespace std;
@@ -28,12 +29,14 @@ int Fecha::getAnio(){
     return anio;
 }
 void Fecha::Cargar(){
-    cout<<"DIA: ";
+    cout<<"Dia: ";
     cin>>dia;
-    cout<<"MES: ";
+    cout<<"Mes: ";
     cin>>mes;
-    cout<<"ANIO: ";
+    cout<<"Anio: ";
     cin>>anio;
+    cout<<dia<<"/"<<mes<<"/"<<anio<<endl;
+    Sleep(700);
 }
 void Fecha::Mostrar(){
     cout<<dia<<"/"<<mes<<"/"<<anio;

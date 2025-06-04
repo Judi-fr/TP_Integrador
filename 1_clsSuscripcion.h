@@ -5,7 +5,7 @@
 
 class Suscripcion{
     private:
-        int identificador;
+        int identificador=1;
         int dni;
         char nombre[30];
         char apellido[30];
