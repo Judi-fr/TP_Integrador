@@ -27,6 +27,7 @@ Suscripcion login(){
 
         for(int i=0;i<cant_suscriptores;i++){
             suscriptor=archivo.leerSuscripcion(i);
+            suscriptor.Mostrar();
             if(strcmp(login.getEmail(),suscriptor.getEmail())== 0&&
                strcmp(login.getContrasenia(),suscriptor.getContrasenia())==0){
                 system("cls");
@@ -39,7 +40,7 @@ Suscripcion login(){
                 rlutil::showcursor();
                 return login;
             }
-        }
+        }system("pause");
         system("cls");
         cout<<"INGRESO INCORRECTO. "<<endl;
         system("pause");

@@ -28,7 +28,11 @@ int Fecha::getMes(){
 int Fecha::getAnio(){
     return anio;
 }
+bool Fecha::getBool(){
+    return cargada;
+}
 void Fecha::Cargar(){
+    cargada=true;
     cout<<"Dia: ";
     cin>>dia;
     if(dia<0||dia>31){

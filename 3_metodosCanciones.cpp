@@ -54,8 +54,8 @@ void Cancion::cargarCancion(){
 }
 void Cancion::mostrarCancion(){
     cout<<numero<<endl;
-    cout<<"el nombre de la cancion es: "<<nombre<<endl;
-    cout<<"el autor es: "<<autor<<endl;
-    cout<<"el interprete es: "<<interprete<<endl;
-    cout<<"reproducciones totales: "<<reproducciones<<endl;
+    cout<<"cancion: "<<endl<<nombre<<endl;
+    cout<<"autor: "<<endl<<autor<<endl;
+    cout<<"interprete: "<<endl<<interprete<<endl;
+    cout<<"reproducciones: "<<endl<<reproducciones<<endl;
 }
