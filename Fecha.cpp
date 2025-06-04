@@ -31,10 +31,22 @@ int Fecha::getAnio(){
 void Fecha::Cargar(){
     cout<<"Dia: ";
     cin>>dia;
+    if(dia<0||dia>31){
+        cout<<"ERROR: Dia invalido"<<endl<<"Dia: ";
+        cin>>dia;
+    }
     cout<<"Mes: ";
     cin>>mes;
+    if(mes<0||mes>12){
+        cout<<"ERROR: Mes invalido"<<endl<<"Mes: ";
+        cin>>mes;
+    }
     cout<<"Anio: ";
     cin>>anio;
+    if(anio<1900||anio>2025){
+        cout<<"ERROR: Anio invalido"<<endl<<"Anio: ";
+        cin>>anio;
+    }
     cout<<dia<<"/"<<mes<<"/"<<anio<<endl;
     Sleep(700);
 }
