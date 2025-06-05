@@ -2,14 +2,18 @@
 #define MENU_H_INCLUDED
 #include "1_clsSuscripcion.h"
 
+///MENUS///////////////////////////////
 void Menu1();
 void Menu2();
 void MenuAdmin();
 
+///SWITCHS/////////////////////////////
 Suscripcion switch1(Suscripcion );
 Suscripcion switch2(Suscripcion ,Fecha );
 void switchAdm();
+///////////////////////////////////////
 
+void dibujar_cajas(int ,int );
 
 
 #endif // MENU_H_INCLUDED

@@ -2,6 +2,7 @@
 #include "rlutil.h"
 #include <string>
 #include "funciones_main.h"
+#include "Menu.h"
 #include "1_clsSuscripcion.h"
 #include "2_clsArchivos.h"
 
@@ -84,6 +85,23 @@ void crearNuevoUsuario (){
     system("pause");
 }
 
+void listaCanciones(Suscripcion sus, Fecha fechaHoy){
+    Archivos archivo;
+    int cant_canciones = archivo.CantidadRegis_canc();
+    int x=0, y=0;
+    system("cls");
+    for(int i=1;i<10;i++){
+        dibujar_cajas(x,y);
+        if(x==0){
+            x+=45;
+        }else{
+            x=0;
+            y+=6;}
+    }
+    cout<<endl;
+    system("pause");
+}
+
 void AnimacionCarga(std::string str){
     rlutil::hidecursor();
     for(int i=0;i<=100;i++){
@@ -97,3 +115,5 @@ void AnimacionCarga(std::string str){
     ///se llena, se hace un \n o endl, se imprime lo que contienen dentro automaticamente, si uno quiere
     ///forzar una impresion en tiempo real se usa el flush para liberar lo que contiene el bufer manualmente
 }
+
+

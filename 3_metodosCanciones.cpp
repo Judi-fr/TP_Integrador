@@ -43,17 +43,16 @@ void Cancion::cargarCancion(){
     cout<<"NUMERO"<<numero<<endl;
     cout<<"NOMBRE"<<endl;
     cin.ignore();
-    cin.getline(nombre,50);
+    cin.getline(nombre,30);
     cout<<"AUTOR"<<endl;
     cin.ignore();
-    cin.getline(autor,50);
+    cin.getline(autor,30);
     cout<<"INTERPRETE"<<endl;
     cin.ignore();
-    cin.getline(interprete,50);
+    cin.getline(interprete,30);
     reproducciones=0;
 }
-void Cancion::mostrarCancion(){
-    cout<<numero<<endl;
+void Cancion::Mostrar(){
     cout<<"cancion: "<<endl<<nombre<<endl;
     cout<<"autor: "<<endl<<autor<<endl;
     cout<<"interprete: "<<endl<<interprete<<endl;

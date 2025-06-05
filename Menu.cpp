@@ -41,13 +41,15 @@ void MenuAdmin()
     cout<<"0. Salir"<<endl;
     cout<<"======================="<<endl<<endl;
     cout<<" >>> ";
-}
+    cout<<"cancion: cancion mas larga que la mierda";
+    cout<<"interprete: 111111111111111111111111111111";/// +44 esquina (14,1) +44 esquina (58,1) otra esquina(59.1) esquina (103,1)
+}                                                      ///             (15,2)nombre:                         (60,2)nombre:
 
 
 Suscripcion switch1(Suscripcion sus){
     int opcion;
     cin>>opcion;
-
+    Fecha fechahoy;
     switch(opcion){
         case 0:
             exit(1);
@@ -72,6 +74,12 @@ Suscripcion switch1(Suscripcion sus){
             break;
         case 5:
             cout<<"Tenes que logearte primero."<<endl;
+            system("pause");
+            system("cls");
+            break;
+        case 9:
+            system("cls");
+            listaCanciones(sus,fechahoy);
             system("pause");
             system("cls");
             break;
@@ -100,7 +108,7 @@ Suscripcion switch2(Suscripcion sus, Fecha fechaHoy){
             system("cls");
             break;
         case 2:
-            crearNuevoUsuario();
+            listaCanciones(sus,fechaHoy);
             system("cls");
             break;
         case 3:
@@ -123,4 +131,16 @@ Suscripcion switch2(Suscripcion sus, Fecha fechaHoy){
             system("cls");
             break;
     }return sus;
+}
+
+
+void dibujar_cajas(int axisX,int axisY){
+    rlutil::locate(14+axisX,1+axisY);
+    cout<<char(201);
+    rlutil::locate(58+axisX,1+axisY);
+    cout<<char(187);
+    rlutil::locate(14+axisX,6+axisY);
+    cout<<char(200);
+    rlutil::locate(58+axisX,6+axisY);
+    cout<<char(188);
 }

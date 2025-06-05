@@ -9,9 +9,9 @@ class Cancion{
     private:
         int numero;
         int reproducciones;
-        char nombre[50];
-        char autor[50];
-        char interprete[50];
+        char nombre[30];
+        char autor[30];
+        char interprete[30];
         Fecha fechaPublicacion;
 
     public:
@@ -28,7 +28,7 @@ class Cancion{
         const char* getInterprete();
 
         void cargarCancion();
-        void mostrarCancion();
+        void Mostrar();
 };
 
 
