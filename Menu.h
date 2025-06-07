@@ -1,6 +1,7 @@
 #ifndef MENU_H_INCLUDED
 #define MENU_H_INCLUDED
 #include "1_clsSuscripcion.h"
+#include "3_clsCancion.h"
 
 ///MENUS///////////////////////////////
 void Menu1();
@@ -13,7 +14,11 @@ Suscripcion switch2(Suscripcion ,Fecha );
 void switchAdm();
 ///////////////////////////////////////
 
+///LISTA-CANCIONES/////////////////////
+void menu_canciones();
+void interaccion_de_menu();
 void dibujar_cajas(int ,int );
+void dibujar_canciones(int ,int ,Cancion );
 
 
 #endif // MENU_H_INCLUDED

@@ -8,7 +8,7 @@
 
 using namespace std;
 
-
+///LOGIN///////////////////////////////////////////////////////
 Suscripcion login(){
     system("cls");
     Suscripcion login, suscriptor;
@@ -28,9 +28,10 @@ Suscripcion login(){
 
         for(int i=0;i<cant_suscriptores;i++){
             suscriptor=archivo.leerSuscripcion(i);
-            suscriptor.Mostrar();
+
             if(strcmp(login.getEmail(),suscriptor.getEmail())== 0&&
                strcmp(login.getContrasenia(),suscriptor.getContrasenia())==0){
+
                 system("cls");
                 AnimacionCarga("Iniciando Sesion ");
                 login=suscriptor;
@@ -41,21 +42,13 @@ Suscripcion login(){
                 rlutil::showcursor();
                 return login;
             }
-        }system("pause");
-        system("cls");
-        cout<<"INGRESO INCORRECTO. "<<endl;
-        system("pause");
-        return Suscripcion();
-    }
-    else{
-        system("cls");
-        cout<<"INGRESO INCORRECTO. "<<endl;
-        system("pause");
-        return Suscripcion();
-    }
-
+        }
+    }system("cls");
+    cout<<"INGRESO INCORRECTO. "<<endl;
+    rlutil::msleep(2000);
+    return Suscripcion();
 }
-
+///SUSCRIBIRSE/////////////////////////////////////////////////
 void crearNuevoUsuario (){
     system("cls");
     Archivos archivo;
@@ -84,23 +77,33 @@ void crearNuevoUsuario (){
     cout<<"Tu ID de suscriptor es: "<<nuevoUsuario.getIdentificador()<< endl;
     system("pause");
 }
-
+///LISTAR-CANCIONES////////////////////////////////////////////
 void listaCanciones(Suscripcion sus, Fecha fechaHoy){
-    Archivos archivo;
-    int cant_canciones = archivo.CantidadRegis_canc();
-    int x=0, y=0;
+
     system("cls");
-    for(int i=1;i<10;i++){
-        dibujar_cajas(x,y);
-        if(x==0){
-            x+=45;
-        }else{
-            x=0;
-            y+=6;}
-    }
-    cout<<endl;
+    rlutil::locate(41,1);
+    cout<<"L i s t a   d e   c a n c i o n e s"<<endl;
+    menu_canciones();
+    interaccion_de_menu();
+    cout<<" ";
+    rlutil::locate(1,1);
     system("pause");
 }
+///HISTORIAL///////////////////////////////////////////////////
+void historial(Suscripcion sus){
+    Archivos archivo;
+    Accesos historialAccesos;
+    Suscripcion historialBuscado;
+    int cantidadUsuarios=archivo.CantidadRegis_susc();
+    for(int i=0;i<cantidadUsuarios;i++){
+        historialAccesos=archivo.leerAcceso(i);
+        historialBuscado=historialAccesos.getSus();
+        if(historialBuscado.getIdentificador()==sus.getIdentificador()){
+            historialAccesos.Mostrar();
+        }
+    }
+}
+///////////////////////////////////////////////////////////////
 
 void AnimacionCarga(std::string str){
     rlutil::hidecursor();

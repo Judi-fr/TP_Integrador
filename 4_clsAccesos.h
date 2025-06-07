@@ -14,6 +14,12 @@ class Accesos{
     public:
         Accesos(Cancion , Suscripcion , Fecha );
         Accesos();
+        Suscripcion getSuscripcion();
+        Suscripcion getSus();
+        Cancion getCanciones();
+        Fecha getFecha();
+        void Mostrar();
+
 };
 
 
