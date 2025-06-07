@@ -24,6 +24,7 @@ void Menu1(){
 ///MENU-2/////////////////////////////////////////////////////
 void Menu2()
 {
+    ///cout<<fecha y nombre
     cout<<"======================"<<endl;
     cout<<"1. Mi perfil"<<endl;
     cout<<"2. Lista de canciones"<<endl;
@@ -115,7 +116,7 @@ Suscripcion switch2(Suscripcion sus, Fecha fechaHoy){
             system("cls");
             break;
         case 3:
-            cout<<"Tenes que logearte primero."<<endl;
+            historial(sus);
             system("pause");
             system("cls");
             break;
@@ -141,7 +142,7 @@ Suscripcion switch2(Suscripcion sus, Fecha fechaHoy){
 void menu_canciones(){
     Archivos archivo;
     int x=0, y=0;
-    for(int i=1;i<20;i++){
+    for(int i=1;i<10;i++){
         Cancion song=archivo.leerCancion(i);
         dibujar_cajas(x,y);
         dibujar_canciones(x,y,song);
@@ -152,8 +153,9 @@ void menu_canciones(){
             y+=6;}
     }
 }
-void interaccion_de_menu(){
+Cancion interaccion_de_menu(){
     Archivos archivo;
+    Cancion cancion;
 
     int pocision = 1, pocisionAux, key, x=0, y=0, auxX, auxY;
     int Cantidad_canciones = archivo.CantidadRegis_canc();
@@ -193,11 +195,12 @@ void interaccion_de_menu(){
                 y+=6;
                 pocision+=2;
                 break;
-            case 10:
+            case 10||1:
                 ///enter
-                return;
+                cancion=archivo.leerCancion(pocision-1);
+                return cancion;
         }
-        if(pocision<20){
+        if(pocision<10){
             rlutil::setColor(rlutil::WHITE);
             dibujar_cajas(auxX,auxY);
             rlutil::setColor(rlutil::BLUE);

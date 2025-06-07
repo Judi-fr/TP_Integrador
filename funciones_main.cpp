@@ -79,12 +79,16 @@ void crearNuevoUsuario (){
 }
 ///LISTAR-CANCIONES////////////////////////////////////////////
 void listaCanciones(Suscripcion sus, Fecha fechaHoy){
-
+    Cancion cancion;
+    Archivos archivo;
     system("cls");
     rlutil::locate(41,1);
     cout<<"L i s t a   d e   c a n c i o n e s"<<endl;
     menu_canciones();
-    interaccion_de_menu();
+    cancion=interaccion_de_menu();
+    Accesos acceso(cancion,sus,fechaHoy);
+    ///archivo.append(acceso);
+
     cout<<" ";
     rlutil::locate(1,1);
     system("pause");

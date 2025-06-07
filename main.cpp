@@ -26,6 +26,10 @@ int main()
                 system("pause");
                 system("cls");
                 fechaHoy.Cargar();
+                if(fechaHoy.getAnio()!=2025){
+                    cout<<"El anio debe ser el actual, 2025. Volve a intentarlo."<<endl;
+                    fechaHoy.Cargar();
+                }
             }
             system("cls");
             Menu2();

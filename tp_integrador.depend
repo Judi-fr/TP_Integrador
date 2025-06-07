@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1748676898 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\main.cpp
+1749287059 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\main.cpp
 	<iostream>
 	"funciones_main.h"
+	"Menu.h"
 	"1_clsSuscripcion.h"
 
 1749003504 source:c:\users\ezeri\documents\facultad\tp-integrador\2_metodosarchivos.cpp
@@ -60,40 +61,43 @@
 	<windows.h>
 	"Fecha.h"
 
-1748678743 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\1_metodossuscripciones.cpp
+1749270900 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\1_metodossuscripciones.cpp
 	<iostream>
 	<cstring>
 	<string>
 	"1_clsSuscripcion.h"
 	"Fecha.h"
 
-1748678743 c:\users\pc\documents\tp_musica_facu\tp_integrador\1_clssuscripcion.h
+1749270900 c:\users\pc\documents\tp_musica_facu\tp_integrador\1_clssuscripcion.h
 	<cstring>
 	"Fecha.h"
 
-1745695676 c:\users\pc\documents\tp_musica_facu\tp_integrador\fecha.h
+1749270900 c:\users\pc\documents\tp_musica_facu\tp_integrador\fecha.h
 
 1745695676 c:\users\pc\documents\tp_musica_facu\tp_integrador\cargar_cadena.h
 
-1748678111 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\2_metodosarchivos.cpp
+1749270900 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\2_metodosarchivos.cpp
 	<iostream>
 	"2_clsArchivos.h"
 
-1748671555 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\3_metodoscanciones.cpp
+1749270900 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\3_metodoscanciones.cpp
 	"3_clsCancion.h"
+	"2_clsArchivos.h"
 	<cstring>
 	<string>
 	<iostream>
 
-1748671555 c:\users\pc\documents\tp_musica_facu\tp_integrador\3_clscancion.h
+1749270900 c:\users\pc\documents\tp_musica_facu\tp_integrador\3_clscancion.h
 	<cstring>
 	<string>
 	"Fecha.h"
 
-1747937770 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\4_metodosaccesos.cpp
+1749270900 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\4_metodosaccesos.cpp
+	<iostream>
 	"4_clsAccesos.h"
+	"1_clsSuscripcion.h"
 
-1748561133 c:\users\pc\documents\tp_musica_facu\tp_integrador\4_clsaccesos.h
+1749270900 c:\users\pc\documents\tp_musica_facu\tp_integrador\4_clsaccesos.h
 	<cstring>
 	"Fecha.h"
 	"3_clsCancion.h"
@@ -105,7 +109,7 @@
 	"3_clsCancion.h"
 	"4_clsAccesos.h"
 
-1748678137 c:\users\pc\documents\tp_musica_facu\tp_integrador\2_clsarchivos.h
+1749270900 c:\users\pc\documents\tp_musica_facu\tp_integrador\2_clsarchivos.h
 	<string>
 	"1_clsSuscripcion.h"
 	"3_clsCancion.h"
@@ -114,16 +118,22 @@
 1745695676 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\cargar_cadena.cpp
 	<iostream>
 
-1745695676 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\fecha.cpp
+1749270900 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\fecha.cpp
 	<iostream>
+	<windows.h>
 	"Fecha.h"
 
-1748680040 c:\users\pc\documents\tp_musica_facu\tp_integrador\funciones_main.h
+1749283519 c:\users\pc\documents\tp_musica_facu\tp_integrador\funciones_main.h
 	"1_clsSuscripcion.h"
 
-1748676909 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\funciones_main.cpp
+1749283106 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\funciones_main.cpp
 	<iostream>
+	"rlutil.h"
+	<string>
 	"funciones_main.h"
+	"Menu.h"
+	"1_clsSuscripcion.h"
+	"2_clsArchivos.h"
 
 1749092217 c:\users\ezeri\documents\facultad\tp-integrador\funciones_main.h
 	"1_clsSuscripcion.h"
@@ -156,6 +166,33 @@
 	"3_clsCancion.h"
 
 1749263194 source:c:\users\ezeri\documents\facultad\tp-integrador\menu.cpp
+	<iostream>
+	"Menu.h"
+	"1_clsSuscripcion.h"
+	"2_clsArchivos.h"
+	"funciones_main.h"
+	"Fecha.h"
+	"rlutil.h"
+
+1749276716 c:\users\pc\documents\tp_musica_facu\tp_integrador\menu.h
+	"1_clsSuscripcion.h"
+	"3_clsCancion.h"
+
+1749270900 c:\users\pc\documents\tp_musica_facu\tp_integrador\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1749283474 source:c:\users\pc\documents\tp_musica_facu\tp_integrador\menu.cpp
 	<iostream>
 	"Menu.h"
 	"1_clsSuscripcion.h"

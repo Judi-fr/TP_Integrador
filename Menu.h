@@ -16,7 +16,7 @@ void switchAdm();
 
 ///LISTA-CANCIONES/////////////////////
 void menu_canciones();
-void interaccion_de_menu();
+Cancion interaccion_de_menu();
 void dibujar_cajas(int ,int );
 void dibujar_canciones(int ,int ,Cancion );
 
