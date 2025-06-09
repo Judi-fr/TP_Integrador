@@ -42,9 +42,14 @@
 		<Unit filename="4_metodosAccesos.cpp" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h" />
 		<Unit filename="cargar_cadena.cpp" />
 		<Unit filename="cargar_cadena.h" />
+		<Unit filename="funciones_main.cpp" />
+		<Unit filename="funciones_main.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="rlutil.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

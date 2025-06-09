@@ -24,7 +24,6 @@ void Menu1(){
 ///MENU-2/////////////////////////////////////////////////////
 void Menu2()
 {
-    ///cout<<fecha y nombre
     cout<<"======================"<<endl;
     cout<<"1. Mi perfil"<<endl;
     cout<<"2. Todas las canciones"<<endl;

@@ -36,6 +36,7 @@ int main()
                 }
             }
             system("cls");
+            rlutil::showcursor();
             Menu2();
             sus=switch2(sus,fechaHoy);
         }
@@ -56,27 +57,36 @@ Suscripcion switch1(Suscripcion sus){
             system("cls");
             break;
         case 2:
-            crearNuevoUsuario();
+            crearNuevoUsuario();                             ///SWITCH 1
             system("cls");
             break;
         case 3:
+            rlutil::locate(6,10);
             cout<<"Tenes que logearte primero."<<endl;
-            system("pause");
+            rlutil::hidecursor();
+            rlutil::anykey();
+            rlutil::showcursor();
             system("cls");
             break;
         case 4:
+            rlutil::locate(6,10);
             cout<<"Tenes que logearte primero."<<endl;
-            system("pause");
-            system("cls");
+            rlutil::hidecursor();
+            rlutil::anykey();
+            system("cls");                                     ///SWITCH 1
+            rlutil::showcursor();
             break;
         case 5:
+            rlutil::locate(6,10);
             cout<<"Tenes que logearte primero."<<endl;
-            system("pause");
+            rlutil::hidecursor();
+            rlutil::anykey();
+            rlutil::showcursor();
             system("cls");
             break;
         case 9:
             system("cls");
-            listaCanciones(sus,fechahoy);
+            listaCanciones(sus,fechahoy);                       ///SWITCH 1
             system("cls");
             break;
         default:
@@ -98,7 +108,7 @@ Suscripcion switch2(Suscripcion sus, Fecha fechaHoy){
             exit(1);
             break;
         case 1:
-            mi_perfil(sus);
+            mi_perfil(sus);                    ///SWITCH 2
             break;
         case 2:
             listaCanciones(sus,fechaHoy);
@@ -107,7 +117,7 @@ Suscripcion switch2(Suscripcion sus, Fecha fechaHoy){
         case 3:
             historial(sus);
             rlutil::hidecursor();
-            rlutil::anykey();
+            rlutil::anykey();                  ///SWITCH 2
             rlutil::showcursor();
             system("cls");
             break;
@@ -120,7 +130,7 @@ Suscripcion switch2(Suscripcion sus, Fecha fechaHoy){
             system("pause");
             system("cls");
             break;
-    }return sus;
+    }return sus;                               ///SWITCH 2
 }
 
 

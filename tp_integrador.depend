@@ -28,7 +28,7 @@
 	"1_clsSuscripcion.h"
 	"Fecha.h"
 
-1749432639 source:c:\users\ezeri\documents\facultad\tp-integrador\main.cpp
+1749436769 source:c:\users\ezeri\documents\facultad\tp-integrador\main.cpp
 	<iostream>
 	"funciones_main.h"
 	"Menu.h"
@@ -139,7 +139,7 @@
 1749429942 c:\users\ezeri\documents\facultad\tp-integrador\funciones_main.h
 	"1_clsSuscripcion.h"
 
-1749430857 source:c:\users\ezeri\documents\facultad\tp-integrador\funciones_main.cpp
+1749436146 source:c:\users\ezeri\documents\facultad\tp-integrador\funciones_main.cpp
 	<iostream>
 	"rlutil.h"
 	<string>
@@ -162,11 +162,11 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1749431713 c:\users\ezeri\documents\facultad\tp-integrador\menu.h
+1749436176 c:\users\ezeri\documents\facultad\tp-integrador\menu.h
 	"1_clsSuscripcion.h"
 	"3_clsCancion.h"
 
-1749431984 source:c:\users\ezeri\documents\facultad\tp-integrador\menu.cpp
+1749436146 source:c:\users\ezeri\documents\facultad\tp-integrador\menu.cpp
 	<iostream>
 	"Menu.h"
 	"1_clsSuscripcion.h"
