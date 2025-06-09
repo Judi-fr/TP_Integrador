@@ -49,9 +49,10 @@ void Fecha::Cargar(){
     cin>>anio;
     if(anio<1900||anio>2025){
         cout<<"ERROR: Anio invalido"<<endl<<"Anio: ";
+
         cin>>anio;
     }
-    cout<<dia<<"/"<<mes<<"/"<<anio<<endl;
+    cout<<endl<<dia<<"/"<<mes<<"/"<<anio<<endl;
     Sleep(700);
 }
 void Fecha::Mostrar(){

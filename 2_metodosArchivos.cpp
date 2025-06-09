@@ -73,7 +73,6 @@ Accesos Archivos::leerAcceso(int pocision){
 }
 
 ///CANTIDAD-REGISTROS//////////////////////////////////////////////////
-
 int Archivos::CantidadRegis_susc(){
     Suscripcion suscripcion;
     int bytes;
@@ -92,7 +91,6 @@ int Archivos::CantidadRegis_susc(){
         return 0;
     }
 }
-
 int Archivos::CantidadRegis_acces(){
     int bytes;
     FILE *pArchivo = fopen("Accesos.dat","rb");
@@ -110,7 +108,6 @@ int Archivos::CantidadRegis_acces(){
         return 0;
     }
 }
-
 int Archivos::CantidadRegis_canc(){
     int bytes;
     FILE *pArchivo = fopen("Canciones.dat","rb");
@@ -129,3 +126,8 @@ int Archivos::CantidadRegis_canc(){
     }
 }
 //////////////////////////////////////////////////////////////////////////
+
+///MODIFICAR-REGISTRO/////////////////////////////////////////////////////
+///void Archivos::Actualizar_reproducciones(int i,Cancion song){
+///    FILE *pFile = fopen("Canciones.dat","rb+");
+///}

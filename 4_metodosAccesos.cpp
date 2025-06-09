@@ -30,7 +30,7 @@ Cancion Accesos::getCanciones(){
     return cancion;
 }
 void Accesos::Mostrar(){
-    cout<<suscriptor.getNombre()<<" "<<suscriptor.getApellido()<<endl;
+    cout<<endl<<suscriptor.getNombre()<<" "<<suscriptor.getApellido()<<endl;
     cout<<"Cancion: "<<cancion.getNombre()<<endl;
     diaEscuchado.Mostrar();
 }

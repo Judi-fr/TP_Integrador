@@ -4,6 +4,7 @@
 
 Suscripcion login();
 void crearNuevoUsuario();
+void mi_perfil(Suscripcion );
 void listaCanciones(Suscripcion , Fecha );
 void historial(Suscripcion );
 void AnimacionCarga(std::string );

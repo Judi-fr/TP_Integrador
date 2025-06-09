@@ -21,6 +21,9 @@ void Cancion::setAutor(const char *x){
 void Cancion::setInterprete(const char *x){
     strcpy(interprete,x);
 }
+void Cancion::setCargado(bool x){
+    cargado=x;
+}
 
 int Cancion::getNumero(){
     return numero;
@@ -36,6 +39,9 @@ const char* Cancion::getAutor(){
 }
 const char* Cancion::getInterprete(){
     return interprete;
+}
+bool Cancion::getCargado(){
+    return cargado;
 }
 void Cancion::cargarCancion(){
     Archivos archivo;

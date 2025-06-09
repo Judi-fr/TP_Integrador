@@ -18,6 +18,7 @@ void switchAdm();
 void menu_canciones();
 Cancion interaccion_de_menu();
 void dibujar_cajas(int ,int );
+void pintarCaja(int , int );
 void dibujar_canciones(int ,int ,Cancion );
 
 

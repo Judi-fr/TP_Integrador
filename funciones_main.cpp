@@ -77,6 +77,44 @@ void crearNuevoUsuario (){
     cout<<"Tu ID de suscriptor es: "<<nuevoUsuario.getIdentificador()<< endl;
     system("pause");
 }
+
+///MI-PERFIL///////////////////////////////////////////////////
+
+void mi_perfil(Suscripcion sus){
+    Fecha fechaNacimiento = sus.getFecha();
+    rlutil::locate(6,9);
+    cout<<sus.getNombre()<<" "<<sus.getApellido()<<endl;
+    rlutil::locate(6,10);
+    cout<<"Dni: "<<sus.getDni()<<endl;
+    rlutil::locate(6,11);
+    cout<<"Fecha de nacimiento: "
+    <<fechaNacimiento.getDia()<<"/"
+    <<fechaNacimiento.getMes()<<"/"
+    <<fechaNacimiento.getAnio()<<endl;
+    rlutil::locate(6,12);
+    cout<<"Telefono: "<<sus.getTelefono()<<endl;
+    rlutil::locate(6,13);
+    cout<<"Email: "<<sus.getEmail()<<endl;
+    rlutil::locate(6,14);
+    cout<<"Suscriptor n."<<sus.getIdentificador();
+
+    rlutil::anykey();
+
+    rlutil::locate(6,9);
+    cout<<"                                     "<<endl;
+    rlutil::locate(6,10);
+    cout<<"                                     "<<endl;
+    rlutil::locate(6,11);
+    cout<<"                                     "<<endl;
+    rlutil::locate(6,12);
+    cout<<"                                     "<<endl;
+    rlutil::locate(6,13);
+    cout<<"                                     "<<endl;
+    rlutil::locate(6,14);
+    cout<<"                                     "<<endl;
+}
+
+
 ///LISTAR-CANCIONES////////////////////////////////////////////
 void listaCanciones(Suscripcion sus, Fecha fechaHoy){
     Cancion cancion;
@@ -86,12 +124,11 @@ void listaCanciones(Suscripcion sus, Fecha fechaHoy){
     cout<<"L i s t a   d e   c a n c i o n e s"<<endl;
     menu_canciones();
     cancion=interaccion_de_menu();
-    Accesos acceso(cancion,sus,fechaHoy);
-    ///archivo.append(acceso);
-
-    cout<<" ";
+    if(cancion.getCargado()== true){
+        Accesos acceso(cancion,sus,fechaHoy);
+        ///archivo.append(acceso);
+    }
     rlutil::locate(1,1);
-    system("pause");
 }
 ///HISTORIAL///////////////////////////////////////////////////
 void historial(Suscripcion sus){
@@ -102,7 +139,7 @@ void historial(Suscripcion sus){
     for(int i=0;i<cantidadUsuarios;i++){
         historialAccesos=archivo.leerAcceso(i);
         historialBuscado=historialAccesos.getSus();
-        if(historialBuscado.getIdentificador()==sus.getIdentificador()){
+        if(sus.getIdentificador()== historialBuscado.getIdentificador()){
             historialAccesos.Mostrar();
         }
     }
