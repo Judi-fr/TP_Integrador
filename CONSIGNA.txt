@@ -18,10 +18,6 @@ el que esta suscripto tiene que poder acceder a las canciones
 -Lista de canciones (clase canciones)(clase archivo_canciones)
 -Historial (clase archivo_acceso) (objeto suscripciones) (objeto canciones)
 ------------------------------------------------------------------------------------------------------------------------
-POR HACER (pongan nombre al lado de la tarea de quien lo hizo)
--2)Suscribirse
--crear metodo de clase accesos donde se carga el objeto con el suscriptor, la cancion y fecha del acceso, enviados como parametro
-
 -------------------------------------------------------------------------------------------------------------------------
 
 APLICACION DE MUSICA

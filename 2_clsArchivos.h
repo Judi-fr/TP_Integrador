@@ -24,6 +24,10 @@ class Archivos{
         int CantidadRegis_acces();
         int CantidadRegis_canc();
 
+        void Actualizar_reproducciones(int posicion, Cancion song);
+
+        int SaberPocision(Cancion );
+
 };
 
 

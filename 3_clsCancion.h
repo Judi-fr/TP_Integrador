@@ -17,7 +17,7 @@ class Cancion{
 
     public:
         void setNumero(int );
-        void setReproducciones(int );
+        void sumarReproduccion();
         void setNombre(const char* );
         void setAutor(const char* );
         void setInterprete(const char* );

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "2_clsArchivos.h"
+using namespace std;
 
 Archivos::Archivos(std::string nombre){
     _nombreArchivo=nombre;
@@ -128,6 +129,30 @@ int Archivos::CantidadRegis_canc(){
 //////////////////////////////////////////////////////////////////////////
 
 ///MODIFICAR-REGISTRO/////////////////////////////////////////////////////
-///void Archivos::Actualizar_reproducciones(int i,Cancion song){
-///    FILE *pFile = fopen("Canciones.dat","rb+");
-///}
+void Archivos::Actualizar_reproducciones(int posicion,Cancion nuevaCancion){
+    FILE *pFile = fopen("Canciones.dat","rb+");
+    if (pFile == nullptr) {
+        cout<<"Error al abrir el archivo."<<endl;
+        return;
+    }
+
+    fseek(pFile, sizeof(Cancion) * posicion, SEEK_SET);  // Posiciona el puntero en el registro a modificar
+    fwrite(&nuevaCancion, sizeof(Cancion), 1, pFile); // Escribe el nuevo objeto en la posición indicada
+
+    fclose(pFile);
+}
+
+///SABER-POCISION///////////////////////////////////////////////////////
+
+int Archivos::SaberPocision(Cancion song){
+    Archivos archivo;
+    Cancion cancionAux;
+    int cantidadRegistros = archivo.CantidadRegis_canc();
+    for(int i=0;i<cantidadRegistros;i++){
+        cancionAux = archivo.leerCancion(i);
+        if(song.getNumero()== cancionAux.getNumero()){
+            return i;
+        }
+    }
+
+}

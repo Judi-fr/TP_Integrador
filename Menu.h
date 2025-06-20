@@ -11,15 +11,7 @@ void MenuAdmin();
 ///SWITCHS/////////////////////////////
 Suscripcion switch1(Suscripcion );
 Suscripcion switch2(Suscripcion ,Fecha );
-void switchAdm();
-///////////////////////////////////////
-
-///LISTA-CANCIONES/////////////////////
-void menu_canciones();
-Cancion interaccion_de_menu();
-void dibujar_cajas(int ,int );
-void pintarCaja(int , int );
-void dibujar_canciones(int ,int ,Cancion );
+Suscripcion switchAdm(Suscripcion );
 
 
 #endif // MENU_H_INCLUDED

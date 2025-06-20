@@ -2,6 +2,7 @@
 #include "funciones_main.h"
 #include "Menu.h"
 #include "1_clsSuscripcion.h"
+#include "2_clsArchivos.h"
 #include "rlutil.h"
 
 
@@ -131,6 +132,50 @@ Suscripcion switch2(Suscripcion sus, Fecha fechaHoy){
             system("cls");
             break;
     }return sus;                               ///SWITCH 2
+}
+
+///SWITCH-ADMIN////////////////////////////////////////////////////////////////
+
+void switchAdm(){
+    int opcion;
+    do {
+        MenuAdmin();
+        cin >> opcion;
+        system("cls");
+
+        switch (opcion) {
+            case 1:
+                cout << "Mostrando reportes..." << endl;
+                system("pause");
+                break;
+            case 2: {
+                Cancion nuevaCancion;
+                nuevaCancion.cargarCancion();
+                Archivos archivo;
+                archivo.append(nuevaCancion);
+                cout << "Canción agregada exitosamente." << endl;
+                system("pause");
+                break;
+            }
+            case 3: {
+                Cancion c;
+                Suscripcion s;
+                Fecha f;
+                Accesos nuevoAcceso(c, s, f);
+                Archivos archivo;
+                archivo.append(nuevoAcceso);
+                cout << "Acceso registrado con éxito." << endl;
+                system("pause");
+                break;
+            }
+            case 4:
+                cout << "Volviendo al menú principal..." << endl;
+                break;
+            default:
+                cout << "Opción no válida. Intente nuevamente." << endl;
+                system("pause");
+        }
+    } while (opcion != 4);
 }
 
 

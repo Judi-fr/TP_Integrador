@@ -1,10 +1,12 @@
 #include <iostream>
-#include "rlutil.h"
 #include <string>
-#include "funciones_main.h"
-#include "Menu.h"
 #include "1_clsSuscripcion.h"
 #include "2_clsArchivos.h"
+#include "funciones_main.h"
+#include "Menu.h"
+#include "MenuListarCanciones.h"
+#include "rlutil.h"
+
 
 using namespace std;
 
@@ -124,7 +126,11 @@ void listaCanciones(Suscripcion sus, Fecha fechaHoy){
     cout<<"L i s t a   d e   c a n c i o n e s"<<endl;
     menu_canciones();
     cancion=interaccion_de_menu();
-    if(cancion.getCargado()== true){
+    if(cancion.getCargado()== true){   ///si se seleciono una cancion (no se uso esc para salir del menu)
+        cancion.sumarReproduccion();
+        int pocision=archivo.SaberPocision(cancion);
+        archivo.Actualizar_reproducciones(pocision, cancion);
+
         Accesos acceso(cancion,sus,fechaHoy);
         ///archivo.append(acceso);
     }

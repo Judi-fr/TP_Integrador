@@ -9,8 +9,8 @@ using namespace std;
 void Cancion::setNumero(int x){
     numero = x;
 }
-void Cancion::setReproducciones(int x){
-    reproducciones = x;
+void Cancion::sumarReproduccion(){
+    reproducciones += 1;
 }
 void Cancion::setNombre(const char *x){
     strcpy(nombre,x);

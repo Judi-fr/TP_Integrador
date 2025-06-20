@@ -5,11 +5,11 @@
 	"Menu.h"
 	"1_clsSuscripcion.h"
 
-1749408905 source:c:\users\ezeri\documents\facultad\tp-integrador\2_metodosarchivos.cpp
+1750365554 source:c:\users\ezeri\documents\facultad\tp-integrador\2_metodosarchivos.cpp
 	<iostream>
 	"2_clsArchivos.h"
 
-1749427491 source:c:\users\ezeri\documents\facultad\tp-integrador\3_metodoscanciones.cpp
+1750360019 source:c:\users\ezeri\documents\facultad\tp-integrador\3_metodoscanciones.cpp
 	"3_clsCancion.h"
 	"2_clsArchivos.h"
 	<cstring>
@@ -28,7 +28,7 @@
 	"1_clsSuscripcion.h"
 	"Fecha.h"
 
-1749436769 source:c:\users\ezeri\documents\facultad\tp-integrador\main.cpp
+1749503820 source:c:\users\ezeri\documents\facultad\tp-integrador\main.cpp
 	<iostream>
 	"funciones_main.h"
 	"Menu.h"
@@ -39,7 +39,7 @@
 	<cstring>
 	"Fecha.h"
 
-1749427491 c:\users\ezeri\documents\facultad\tp-integrador\3_clscancion.h
+1750359957 c:\users\ezeri\documents\facultad\tp-integrador\3_clscancion.h
 	<cstring>
 	<string>
 	"Fecha.h"
@@ -104,7 +104,7 @@
 	"3_clsCancion.h"
 	"1_clsSuscripcion.h"
 
-1748987364 c:\users\ezeri\documents\facultad\tp-integrador\2_clsarchivos.h
+1750359822 c:\users\ezeri\documents\facultad\tp-integrador\2_clsarchivos.h
 	<string>
 	"1_clsSuscripcion.h"
 	"3_clsCancion.h"
@@ -139,14 +139,15 @@
 1749429942 c:\users\ezeri\documents\facultad\tp-integrador\funciones_main.h
 	"1_clsSuscripcion.h"
 
-1749436146 source:c:\users\ezeri\documents\facultad\tp-integrador\funciones_main.cpp
+1750365729 source:c:\users\ezeri\documents\facultad\tp-integrador\funciones_main.cpp
 	<iostream>
-	"rlutil.h"
 	<string>
-	"funciones_main.h"
-	"Menu.h"
 	"1_clsSuscripcion.h"
 	"2_clsArchivos.h"
+	"funciones_main.h"
+	"Menu.h"
+	"MenuListarCanciones.h"
+	"rlutil.h"
 
 1749009342 c:\users\ezeri\documents\facultad\tp-integrador\rlutil.h
 	<iostream>
@@ -162,11 +163,11 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1749436176 c:\users\ezeri\documents\facultad\tp-integrador\menu.h
+1750449879 c:\users\ezeri\documents\facultad\tp-integrador\menu.h
 	"1_clsSuscripcion.h"
 	"3_clsCancion.h"
 
-1749436146 source:c:\users\ezeri\documents\facultad\tp-integrador\menu.cpp
+1750365520 source:c:\users\ezeri\documents\facultad\tp-integrador\menu.cpp
 	<iostream>
 	"Menu.h"
 	"1_clsSuscripcion.h"
@@ -201,4 +202,12 @@
 	"funciones_main.h"
 	"Fecha.h"
 	"rlutil.h"
+
+1750365636 source:c:\users\ezeri\documents\facultad\tp-integrador\menulistarcanciones.cpp
+	<iostream>
+	"2_clsArchivos.h"
+	"rlutil.h"
+	"MenuListarCanciones.h"
+
+1750365516 c:\users\ezeri\documents\facultad\tp-integrador\menulistarcanciones.h
 
