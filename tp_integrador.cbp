@@ -44,6 +44,8 @@
 		<Unit filename="Fecha.h" />
 		<Unit filename="Menu.cpp" />
 		<Unit filename="Menu.h" />
+		<Unit filename="MenuListarCanciones.cpp" />
+		<Unit filename="MenuListarCanciones.h" />
 		<Unit filename="cargar_cadena.cpp" />
 		<Unit filename="cargar_cadena.h" />
 		<Unit filename="funciones_main.cpp" />
