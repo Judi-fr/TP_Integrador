@@ -4,10 +4,21 @@
 
 using namespace std;
 
-Fecha::Fecha(int d, int m, int a){
-    dia = d;
-    mes = m;
-    anio = a;
+bool Fecha::operator==(const Fecha& otra) {
+    if(dia == otra.dia &&
+    mes == otra.mes &&
+    anio == otra.anio){
+    return true;
+    }
+    return false;
+}
+
+Fecha::Fecha(int _dia=0,int _mes=0,int _anio=1900){
+    dia=_dia;
+    mes=_mes;
+    anio=_anio;
+}
+Fecha::Fecha(){
 }
 
 void Fecha::setDia(int d){

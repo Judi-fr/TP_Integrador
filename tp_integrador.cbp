@@ -32,16 +32,24 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="1_archSuscripcion.cpp" />
+		<Unit filename="1_archSuscripcion.h" />
 		<Unit filename="1_clsSuscripcion.h" />
 		<Unit filename="1_metodosSuscripciones.cpp" />
 		<Unit filename="2_clsArchivos.h" />
 		<Unit filename="2_metodosArchivos.cpp" />
+		<Unit filename="3_archCanciones.cpp" />
+		<Unit filename="3_archCanciones.h" />
 		<Unit filename="3_clsCancion.h" />
 		<Unit filename="3_metodosCanciones.cpp" />
+		<Unit filename="4_archAccesos.cpp" />
+		<Unit filename="4_archAccesos.h" />
 		<Unit filename="4_clsAccesos.h" />
 		<Unit filename="4_metodosAccesos.cpp" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
+		<Unit filename="Hora.cpp" />
+		<Unit filename="Hora.h" />
 		<Unit filename="Menu.cpp" />
 		<Unit filename="Menu.h" />
 		<Unit filename="MenuListarCanciones.cpp" />

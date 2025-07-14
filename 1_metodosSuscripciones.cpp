@@ -9,8 +9,11 @@
 using namespace std;
 
 Suscripcion::Suscripcion(){
+    identificador = 1;
+    logeado = false;
 }
 
+///setters/////////////////////////////////////////
 void Suscripcion::setIdentificador(int x){
     identificador = x;
 }
@@ -38,6 +41,8 @@ void Suscripcion::setLogeado(bool valor){
 void Suscripcion::setFechaNac(Fecha x){
     fechaNacimiento = x;
 }
+
+///getters/////////////////////////////////////////
 int Suscripcion::getIdentificador(){
     return identificador;
 }
@@ -62,28 +67,27 @@ const char *Suscripcion::getContrasenia(){
 bool Suscripcion::getLogeado(){
     return logeado;
 }
-
 Fecha Suscripcion::getFecha(){
     return fechaNacimiento;
 }
 
 void Suscripcion::Cargar(){
-    cout<<"INGRESA TU DNI: ";
-    cin>>dni;
-    cout<<"INGRESA TU NOMBRE: ";
-    cin.ignore();
-    cin.getline(nombre,30);
-    cout<<"INGRESA TU APELLIDO: ";
-    cin.ignore();
-    cin.getline(apellido,30);
-    cout<<"INGRESA TU TELEFONO: ";
-    cin>>telefono;
-    cout<<"INGRESA TU EMAIL: ";
+    cout<<"INGRESA TU EMAIL: "<<flush;
     cin.ignore();
     cin.getline(email,50);
     cout<<"INGRESA CONTRASENIA: ";
     cin.ignore();
     cin.getline(contrasenia,50);
+    cout<<"INGRESA TU DNI: ";
+    cin>>dni;
+    cout<<"INGRESA TU NOMBRE: ";
+    cin.ignore();
+    cin.getline(nombre,30);
+    cout<<"INGRESA TU APELLIDO: "<<flush;
+    cin.ignore();
+    cin.getline(apellido,30);
+    cout<<"INGRESA TU TELEFONO: "<<flush;
+    cin>>telefono;
     cout<<"INGRESA TU FECHA DE NACIMIENTO: "<<endl;
     fechaNacimiento.Cargar();
 }

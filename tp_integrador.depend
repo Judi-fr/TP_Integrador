@@ -5,46 +5,50 @@
 	"Menu.h"
 	"1_clsSuscripcion.h"
 
-1750365554 source:c:\users\ezeri\documents\facultad\tp-integrador\2_metodosarchivos.cpp
-	<iostream>
-	"2_clsArchivos.h"
+1751845619 source:c:\users\ezeri\documents\facultad\tp-integrador\2_metodosarchivos.cpp
 
-1750360019 source:c:\users\ezeri\documents\facultad\tp-integrador\3_metodoscanciones.cpp
+1751847740 source:c:\users\ezeri\documents\facultad\tp-integrador\3_metodoscanciones.cpp
 	"3_clsCancion.h"
+	"3_archCanciones.h"
 	"2_clsArchivos.h"
 	<cstring>
 	<string>
 	<iostream>
 
-1749432983 source:c:\users\ezeri\documents\facultad\tp-integrador\4_metodosaccesos.cpp
+1751908160 source:c:\users\ezeri\documents\facultad\tp-integrador\4_metodosaccesos.cpp
 	<iostream>
 	"4_clsAccesos.h"
 	"1_clsSuscripcion.h"
+	"1_archSuscripcion.h"
+	"3_archCanciones.h"
 
-1749008927 source:c:\users\ezeri\documents\facultad\tp-integrador\1_metodossuscripciones.cpp
+1751845166 source:c:\users\ezeri\documents\facultad\tp-integrador\1_metodossuscripciones.cpp
 	<iostream>
 	<cstring>
 	<string>
 	"1_clsSuscripcion.h"
 	"Fecha.h"
 
-1749503820 source:c:\users\ezeri\documents\facultad\tp-integrador\main.cpp
+1751998755 source:c:\users\ezeri\documents\facultad\tp-integrador\main.cpp
 	<iostream>
+	<ctime>
 	"funciones_main.h"
 	"Menu.h"
 	"1_clsSuscripcion.h"
+	"3_archCanciones.h"
+	"2_clsArchivos.h"
 	"rlutil.h"
 
-1749008642 c:\users\ezeri\documents\facultad\tp-integrador\1_clssuscripcion.h
+1751840157 c:\users\ezeri\documents\facultad\tp-integrador\1_clssuscripcion.h
 	<cstring>
 	"Fecha.h"
 
-1750359957 c:\users\ezeri\documents\facultad\tp-integrador\3_clscancion.h
+1751483897 c:\users\ezeri\documents\facultad\tp-integrador\3_clscancion.h
 	<cstring>
 	<string>
 	"Fecha.h"
 
-1749181595 c:\users\ezeri\documents\facultad\tp-integrador\4_clsaccesos.h
+1751907988 c:\users\ezeri\documents\facultad\tp-integrador\4_clsaccesos.h
 	<cstring>
 	"Fecha.h"
 	"3_clsCancion.h"
@@ -53,11 +57,11 @@
 1745288707 source:c:\users\ezeri\documents\facultad\tp-integrador\cargar_cadena.cpp
 	<iostream>
 
-1749064694 c:\users\ezeri\documents\facultad\tp-integrador\fecha.h
+1751911167 c:\users\ezeri\documents\facultad\tp-integrador\fecha.h
 
 1745288707 c:\users\ezeri\documents\facultad\tp-integrador\cargar_cadena.h
 
-1749432534 source:c:\users\ezeri\documents\facultad\tp-integrador\fecha.cpp
+1751911115 source:c:\users\ezeri\documents\facultad\tp-integrador\fecha.cpp
 	<iostream>
 	<windows.h>
 	"Fecha.h"
@@ -104,11 +108,7 @@
 	"3_clsCancion.h"
 	"1_clsSuscripcion.h"
 
-1750359822 c:\users\ezeri\documents\facultad\tp-integrador\2_clsarchivos.h
-	<string>
-	"1_clsSuscripcion.h"
-	"3_clsCancion.h"
-	"4_clsAccesos.h"
+1751846113 c:\users\ezeri\documents\facultad\tp-integrador\2_clsarchivos.h
 
 1749270900 c:\users\pc\documents\tp_musica_facu\tp_integrador\2_clsarchivos.h
 	<string>
@@ -136,13 +136,17 @@
 	"1_clsSuscripcion.h"
 	"2_clsArchivos.h"
 
-1749429942 c:\users\ezeri\documents\facultad\tp-integrador\funciones_main.h
+1751318810 c:\users\ezeri\documents\facultad\tp-integrador\funciones_main.h
 	"1_clsSuscripcion.h"
+	"4_clsAccesos.h"
 
-1750365729 source:c:\users\ezeri\documents\facultad\tp-integrador\funciones_main.cpp
+1751998873 source:c:\users\ezeri\documents\facultad\tp-integrador\funciones_main.cpp
 	<iostream>
 	<string>
 	"1_clsSuscripcion.h"
+	"1_archSuscripcion.h"
+	"3_archCanciones.h"
+	"4_archAccesos.h"
 	"2_clsArchivos.h"
 	"funciones_main.h"
 	"Menu.h"
@@ -163,11 +167,11 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1750449879 c:\users\ezeri\documents\facultad\tp-integrador\menu.h
+1750708157 c:\users\ezeri\documents\facultad\tp-integrador\menu.h
 	"1_clsSuscripcion.h"
 	"3_clsCancion.h"
 
-1750365520 source:c:\users\ezeri\documents\facultad\tp-integrador\menu.cpp
+1751321933 source:c:\users\ezeri\documents\facultad\tp-integrador\menu.cpp
 	<iostream>
 	"Menu.h"
 	"1_clsSuscripcion.h"
@@ -203,11 +207,34 @@
 	"Fecha.h"
 	"rlutil.h"
 
-1750365636 source:c:\users\ezeri\documents\facultad\tp-integrador\menulistarcanciones.cpp
+1751900166 source:c:\users\ezeri\documents\facultad\tp-integrador\menulistarcanciones.cpp
 	<iostream>
 	"2_clsArchivos.h"
+	"3_archCanciones.h"
 	"rlutil.h"
 	"MenuListarCanciones.h"
 
-1750365516 c:\users\ezeri\documents\facultad\tp-integrador\menulistarcanciones.h
+1751899569 c:\users\ezeri\documents\facultad\tp-integrador\menulistarcanciones.h
+	"3_clsCancion.h"
+
+1751904522 source:c:\users\ezeri\documents\facultad\tp-integrador\1_archsuscripcion.cpp
+	<iostream>
+	"1_archSuscripcion.h"
+
+1751903800 c:\users\ezeri\documents\facultad\tp-integrador\1_archsuscripcion.h
+	"1_clsSuscripcion.h"
+
+1751904653 source:c:\users\ezeri\documents\facultad\tp-integrador\3_archcanciones.cpp
+	<iostream>
+	"3_archCanciones.h"
+
+1751904575 c:\users\ezeri\documents\facultad\tp-integrador\3_archcanciones.h
+	"3_clsCancion.h"
+
+1751991540 source:c:\users\ezeri\documents\facultad\tp-integrador\4_archaccesos.cpp
+	<iostream>
+	"4_archAccesos.h"
+
+1751847624 c:\users\ezeri\documents\facultad\tp-integrador\4_archaccesos.h
+	"4_clsAccesos.h"
 

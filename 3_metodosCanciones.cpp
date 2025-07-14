@@ -1,10 +1,15 @@
 #include "3_clsCancion.h"
+#include "3_archCanciones.h"
 #include "2_clsArchivos.h"
 #include <cstring>
 #include <string>
 #include <iostream>
 
 using namespace std;
+
+Cancion::Cancion(){
+    cargado=false;
+}
 
 void Cancion::setNumero(int x){
     numero = x;
@@ -44,9 +49,8 @@ bool Cancion::getCargado(){
     return cargado;
 }
 void Cancion::cargarCancion(){
-    Archivos archivo;
+    Archivo_Cancion archivo;
     numero=archivo.CantidadRegis_canc()+1;
-    cout<<"NUMERO"<<numero<<endl;
     cout<<"NOMBRE"<<endl;
     cin.ignore();
     cin.getline(nombre,30);

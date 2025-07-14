@@ -6,7 +6,9 @@ class Fecha{
         int dia, mes, anio;
         bool cargada=false;
     public:
-        Fecha(int d=1, int m=1, int a=1900);
+        bool operator==(const Fecha& otra);
+        Fecha(int ,int ,int );
+        Fecha();
         void setDia(int);
         void setMes(int);
         void setAnio(int);

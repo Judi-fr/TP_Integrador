@@ -1,20 +1,31 @@
 #include <iostream>
+#include <ctime>
 #include "funciones_main.h"
 #include "Menu.h"
 #include "1_clsSuscripcion.h"
+#include "3_archCanciones.h"
 #include "2_clsArchivos.h"
 #include "rlutil.h"
 
 
 using namespace std;
 
+void switchReportes();
+Suscripcion switchAdm(Suscripcion );
 
-
+/**
+ABML para todos los archivos.
+ALTA
+BAJA
+MODIFICACION
+LISTADO
+*/
 
 int main()
 {
     Fecha fechaHoy;
     Suscripcion sus;
+    char admin[6]="admin";
 
     while(true){
         int opcion;
@@ -23,24 +34,32 @@ int main()
             sus=switch1(sus);
         }
         if(sus.getLogeado()){
-            if (fechaHoy.getBool()==false){
-                cout<<"Ingrese la fecha de hoy"<<endl;
-                system("pause");
-                system("cls");
-                fechaHoy.Cargar();
-                if(fechaHoy.getAnio()!=2025){
-                    system("cls");
-                    cout<<"ERROR: El anio debe ser el actual, 2025. Volve a intentarlo."<<endl;
-                    rlutil::anykey();
+            if(strcmp(sus.getEmail(),admin)==0){
+                MenuAdmin();Fecha&
+                sus=switchAdm(sus);
+
+            }else{
+                if (fechaHoy.getBool()== false){
+                    cout<<"Ingrese la fecha de hoy"<<endl;
+                    system("pause");
                     system("cls");
                     fechaHoy.Cargar();
+                    if(fechaHoy.getAnio()!=2025){
+                        system("cls");
+                        cout<<"ERROR: El anio debe ser el actual, 2025. Volve a intentarlo."<<endl;
+                        rlutil::anykey();
+                        system("cls");
+                        fechaHoy.Cargar();
+                    }
                 }
+                system("cls");
+                rlutil::showcursor();
+                Menu2();
+                sus=switch2(sus,fechaHoy);
             }
-            system("cls");
-            rlutil::showcursor();
-            Menu2();
-            sus=switch2(sus,fechaHoy);
+
         }
+
     }
 }
 
@@ -134,48 +153,83 @@ Suscripcion switch2(Suscripcion sus, Fecha fechaHoy){
     }return sus;                               ///SWITCH 2
 }
 
-///SWITCH-ADMIN////////////////////////////////////////////////////////////////
+///SWITCH-ADMIN/////////////////////////////////////////////////
+Suscripcion switchAdm(Suscripcion sus){
 
-void switchAdm(){
     int opcion;
-    do {
-        MenuAdmin();
-        cin >> opcion;
-        system("cls");
+    Suscripcion vacia;
+    cin>>opcion;
+    system("cls");
 
-        switch (opcion) {
-            case 1:
-                cout << "Mostrando reportes..." << endl;
-                system("pause");
-                break;
-            case 2: {
-                Cancion nuevaCancion;
-                nuevaCancion.cargarCancion();
-                Archivos archivo;
-                archivo.append(nuevaCancion);
-                cout << "Canción agregada exitosamente." << endl;
-                system("pause");
-                break;
-            }
-            case 3: {
-                Cancion c;
-                Suscripcion s;
-                Fecha f;
-                Accesos nuevoAcceso(c, s, f);
-                Archivos archivo;
-                archivo.append(nuevoAcceso);
-                cout << "Acceso registrado con éxito." << endl;
-                system("pause");
-                break;
-            }
-            case 4:
-                cout << "Volviendo al menú principal..." << endl;
-                break;
-            default:
-                cout << "Opción no válida. Intente nuevamente." << endl;
-                system("pause");
+    switch(opcion){
+        case 1:
+            system("cls");
+            MenuReportes();
+            switchReportes();
+            break;
+        case 2:{
+            Cancion nuevaCancion;
+            nuevaCancion.cargarCancion();
+            Archivo_Cancion archivo;
+            archivo.append(nuevaCancion);
+            cout<<"Canción agregada exitosamente."<<endl;
+            system("pause");
+            break;
         }
-    } while (opcion != 4);
+        case 3:
+            sus=vacia;
+            return sus;
+            break;
+        default:
+            cout<<"Opción no válida. Intente nuevamente."<<endl;
+            system("pause");
+            break;
+    }
+}
+///SWITCH-REPORTES//////////////////////////////////////////////
+void switchReportes(){
+    int opcion;
+    MenuReportes();
+    cin>>opcion;
+    system("cls");
+
+    switch (opcion) {
+        case 1:
+            reporte1();
+            system("cls");
+            MenuReportes();
+            switchReportes();
+            break;
+        case 2:
+            reporte2();
+            system("cls");
+            MenuReportes();
+            switchReportes();
+            break;
+        case 3:
+            reporte3();
+            system("cls");
+            MenuReportes();
+            switchReportes();
+            break;
+        case 4:
+            reporte4();
+            system("cls");
+            MenuReportes();
+            switchReportes();
+            break;
+        case 5:
+            reporte5();
+            system("cls");
+            MenuReportes();
+            switchReportes();
+            break;
+        case 6:
+            break;
+        default:
+            cout << "Opción no válida. Intente nuevamente." << endl;
+            system("pause");
+    }
 }
 
 

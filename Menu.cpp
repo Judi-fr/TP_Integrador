@@ -41,8 +41,22 @@ void MenuAdmin() {
     cout << "==============================" << endl;
     cout << "1. Reportes" << endl;
     cout << "2. Agregar nueva canción" << endl;
-    cout << "3. Registrar acceso" << endl;
-    cout << "4. Volver al menú principal" << endl;
+    cout << "3. Volver al menú principal" << endl;
+    cout << "==============================" << endl;
+    cout << " >>> ";
+}
+
+void MenuReportes() {
+    system("cls");
+    cout << "==============================" << endl;
+    cout << "      MENU REPORTES     " << endl;
+    cout << "==============================" << endl;
+    cout << "1. Reportes 1" << endl;
+    cout << "2. Reportes 2" << endl;
+    cout << "3. Reportes 3" << endl;
+    cout << "4. Reportes 4" << endl;
+    cout << "5. Reportes 5" << endl;
+    cout << "6. Volver al menú principal" << endl;
     cout << "==============================" << endl;
     cout << " >>> ";
 }

@@ -5,14 +5,14 @@
 
 class Suscripcion{
     private:
-        int identificador=1;
+        int identificador;
         int dni;
         char nombre[30];
         char apellido[30];
         int telefono;
         char email[50];
         char contrasenia[50];
-        bool logeado = false;
+        bool logeado;
         Fecha fechaNacimiento;
     public:
         Suscripcion();

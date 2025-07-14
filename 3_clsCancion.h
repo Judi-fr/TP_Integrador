@@ -13,9 +13,11 @@ class Cancion{
         char autor[30];
         char interprete[30];
         Fecha fechaPublicacion;
-        bool cargado = false;
+        bool cargado;
 
     public:
+        Cancion();
+
         void setNumero(int );
         void sumarReproduccion();
         void setNombre(const char* );

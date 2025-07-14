@@ -7,6 +7,7 @@
 void Menu1();
 void Menu2();
 void MenuAdmin();
+void MenuReportes();
 
 ///SWITCHS/////////////////////////////
 Suscripcion switch1(Suscripcion );

@@ -1,5 +1,7 @@
 #include <iostream>
 #include "2_clsArchivos.h"
+#include "3_archCanciones.h"
+
 #include "rlutil.h"
 #include "MenuListarCanciones.h"
 
@@ -7,9 +9,10 @@
 using namespace std;
 
 void menu_canciones(){
-    Archivos archivo;
+    Archivo_Cancion archivo;
+    int cantidad_canciones=archivo.CantidadRegis_canc();
     int x=0, y=0;
-    for(int i=1;i<10;i++){
+    for(int i=0;i<cantidad_canciones;i++){
         Cancion song=archivo.leerCancion(i);
         dibujar_cajas(x,y);
         dibujar_canciones(x,y,song);
@@ -20,8 +23,9 @@ void menu_canciones(){
             y+=6;}
     }
 }
+
 Cancion interaccion_de_menu(){
-    Archivos archivo;
+    Archivo_Cancion archivo;
     Cancion cancion;
 
     int pocision = 1, pocisionAux, key, x=0, y=0, auxX, auxY;
@@ -73,7 +77,7 @@ Cancion interaccion_de_menu(){
                 return cancion;
 
         }
-        if(pocision<10){
+        if(pocision<=Cantidad_canciones){
             rlutil::setColor(rlutil::WHITE);
             dibujar_cajas(auxX,auxY);
             rlutil::setColor(rlutil::BLUE);
@@ -130,6 +134,7 @@ void pintarCaja(int x, int y){
     dibujar_cajas(x,y);
     rlutil::msleep(50);
 }
+
 void dibujar_canciones(int axisX, int axisY,Cancion song){
     rlutil::locate(15+axisX,3+axisY);
     cout<<"Cancion: "<<song.getNombre();

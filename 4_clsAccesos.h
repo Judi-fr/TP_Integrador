@@ -7,20 +7,23 @@
 
 class Accesos{
     private:
-        Cancion cancion;
-        Suscripcion suscriptor;
+        int idCancion;
+        int idSuscripcion;
         Fecha diaEscuchado;
 
     public:
-        Accesos(Cancion , Suscripcion , Fecha );
+        Accesos(int , int , Fecha );
         Accesos();
-        Suscripcion getSuscripcion();
-        Suscripcion getSus();
-        Cancion getCanciones();
+        void setCancion(int song);
+        void setSuscriptor(int sus);
+        void setFecha(Fecha fecha);
+        int getSuscripcion();
+        int getCanciones();
         Fecha getFecha();
         void Mostrar();
 
 };
+
 
 
 
