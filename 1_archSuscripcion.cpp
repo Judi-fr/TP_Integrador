@@ -34,6 +34,35 @@ void Archivo_Suscripcion::append(Suscripcion suscripcion){
     return;
 }
 
+///BAJA-LOGICA//////////////////////////////////////////////////////////
+void Archivo_Suscripcion::bajaLogica(int id){
+    Archivo_Suscripcion archivoSus;
+    Suscripcion sus;
+    bool encontrado = false;
+    int cantidad = archivoSus.CantidadRegis_susc();
+
+    for(int i = 0; i < cantidad; i++){
+        sus = archivoSus.leerSuscripcion(i);
+
+        if(sus.getIdentificador() == id && sus.getBajaLogica()){
+            sus.setBajaLogica(false);
+            encontrado = true;
+            cout << "La suscripcion ha sido dada de Baja" << endl;
+            break;
+        }
+        if(sus.getIdentificador() == id && sus.getBajaLogica() == false){
+            sus.setBajaLogica(true);
+            encontrado = true;
+            cout << "La suscripcion ha sido dada de Alta" << endl;
+            break;
+        }
+    }
+    if(encontrado){
+        int posicion = archivoSus.SaberPocision(sus);
+        archivoSus.Actualizar(posicion, sus);
+    }
+}
+
 ///CANTIDAD-REGISTROS//////////////////////////////////////////////////
 int Archivo_Suscripcion::CantidadRegis_susc(){
     Suscripcion suscripcion;
@@ -51,6 +80,33 @@ int Archivo_Suscripcion::CantidadRegis_susc(){
     }
     else{
         return 0;
+    }
+}
+///MODIFICAR-REGISTRO/////////////////////////////////////////////////////
+void Archivo_Suscripcion::Actualizar(int posicion,Suscripcion nuevaSuscripcion){
+    FILE *pFile = fopen("Suscripciones.dat","rb+");
+    if (pFile == nullptr) {
+        cout<<"Error al abrir el archivo."<<endl;
+        return;
+    }
+
+    fseek(pFile, sizeof(Suscripcion) * posicion, SEEK_SET);
+    fwrite(&nuevaSuscripcion, sizeof(Suscripcion), 1, pFile);
+
+    fclose(pFile);
+}
+
+///SABER-POCISION///////////////////////////////////////////////////////
+
+int Archivo_Suscripcion::SaberPocision(Suscripcion sus){
+    Archivo_Suscripcion archivo;
+    Suscripcion suscripcionAux;
+    int cantidadRegistros = archivo.CantidadRegis_susc();
+    for(int i=0;i<cantidadRegistros;i++){
+        suscripcionAux = archivo.leerSuscripcion(i);
+        if(sus.getIdentificador()== suscripcionAux.getIdentificador()){
+            return i;
+        }
     }
 }
 
@@ -71,5 +127,7 @@ Suscripcion Archivo_Suscripcion::BuscarPorId(int idBuscado){
     }
 
     fclose(archivo);
+    cout<<"No se encontro la suscripcion.";
+    noEncontrado.setIdentificador(-1);
     return noEncontrado;
 }

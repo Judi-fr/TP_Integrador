@@ -16,6 +16,7 @@ class Fecha{
         int getMes();
         int getAnio();
         bool getBool();
+        void CargarActual();
         void Cargar();
         void Mostrar();
 };

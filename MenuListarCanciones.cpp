@@ -8,28 +8,44 @@
 
 using namespace std;
 
-void menu_canciones(){
+int menu_canciones(){
     Archivo_Cancion archivo;
     int cantidad_canciones=archivo.CantidadRegis_canc();
-    int x=0, y=0;
+    int x=0, y=0,countBajaLogica=0;
     for(int i=0;i<cantidad_canciones;i++){
         Cancion song=archivo.leerCancion(i);
-        dibujar_cajas(x,y);
-        dibujar_canciones(x,y,song);
-        if(x==0){
-            x+=45;
-        }else{
-            x=0;
-            y+=6;}
+        if(song.getBajaLogica()==true){
+            dibujar_cajas(x,y);
+            dibujar_canciones(x,y,song);
+            if(x==0){
+                x+=45;
+            }else{
+                x=0;
+                y+=6;}
+        }else{countBajaLogica+=1;}
+    }
+    return countBajaLogica;
+}
+Cancion devuelveCancion(int posicion){
+    Archivo_Cancion archivo;
+    int cantidad_canciones=archivo.CantidadRegis_canc(), x=1;
+    for(int i=0;i<cantidad_canciones;i++){
+        Cancion song=archivo.leerCancion(i);
+        if(song.getBajaLogica()==true){
+            if(posicion==x){
+                return song;
+            }
+            x++;
+        }
     }
 }
 
-Cancion interaccion_de_menu(){
+Cancion interaccion_de_menu(int contador){
     Archivo_Cancion archivo;
     Cancion cancion;
 
     int pocision = 1, pocisionAux, key, x=0, y=0, auxX, auxY;
-    int Cantidad_canciones = archivo.CantidadRegis_canc();
+    int Cantidad_canciones = (archivo.CantidadRegis_canc())-contador;
     rlutil::hidecursor();
     rlutil::locate(1,1);
 
@@ -68,7 +84,7 @@ Cancion interaccion_de_menu(){
                 break;
             case 10||1:
                 ///enter
-                cancion=archivo.leerCancion(pocision-1);
+                cancion=devuelveCancion(pocision);
                 cancion.setCargado(true);
                 pintarCaja(x,y);
                 return cancion;

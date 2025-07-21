@@ -8,7 +8,7 @@ class Hora{
         int segundo;
     public:
         Hora(int ,int ,int );
-
+        Hora();
         void setHora(int );
         void setMinuto(int );
         void setSegundo(int );
@@ -17,7 +17,7 @@ class Hora{
         int getSegundo();
 
         void Cargar();
-        void Mostrar(int , int );
+        void Mostrar();
 
 
 

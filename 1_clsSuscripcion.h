@@ -14,6 +14,7 @@ class Suscripcion{
         char contrasenia[50];
         bool logeado;
         Fecha fechaNacimiento;
+        bool BajaLogica;
     public:
         Suscripcion();
 
@@ -26,6 +27,7 @@ class Suscripcion{
         void setContrasenia(const char *);
         void setLogeado(bool );
         void setFechaNac(Fecha x);
+        void setBajaLogica(bool );
 
         int getIdentificador();
         int getDni();
@@ -36,6 +38,7 @@ class Suscripcion{
         const char *getContrasenia();
         bool getLogeado();
         Fecha getFecha();
+        bool getBajaLogica();
 
         void Cargar();
         void cargarEmail();

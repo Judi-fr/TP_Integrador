@@ -3,13 +3,15 @@
 #include "1_clsSuscripcion.h"
 #include "1_archSuscripcion.h"
 #include "3_archCanciones.h"
+#include "Hora.h"
 ///METODOS ACCESOS
 using namespace std;
 
-Accesos::Accesos(int cancion_, int Suscripcion_, Fecha fecha_){
+Accesos::Accesos(int cancion_, int Suscripcion_, Fecha fecha_,Hora hora){
     idCancion=cancion_;
     idSuscripcion=Suscripcion_;
     diaEscuchado=fecha_;
+    horaEscuchada = hora;
 }
 
 Accesos::Accesos(){
@@ -30,7 +32,9 @@ int Accesos::getSuscripcion(){
 Fecha Accesos::getFecha(){
     return diaEscuchado;
 }
-
+Hora Accesos::getHora(){
+    return horaEscuchada;
+}
 int Accesos::getCanciones(){
     return idCancion;
 }

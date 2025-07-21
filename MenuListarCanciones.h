@@ -4,8 +4,9 @@
 #include "3_clsCancion.h"
 
 ///LISTA-CANCIONES/////////////////////
-void menu_canciones();
-Cancion interaccion_de_menu();
+int menu_canciones();
+Cancion devuelveCancion(int posicion);
+Cancion interaccion_de_menu(int );
 void dibujar_cajas(int ,int );
 void pintarCaja(int , int );
 void dibujar_canciones(int ,int ,Cancion );

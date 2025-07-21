@@ -1,6 +1,7 @@
 #include <iostream>
 #include <windows.h>
 #include "Fecha.h"
+#include <ctime>
 
 using namespace std;
 
@@ -42,6 +43,16 @@ int Fecha::getAnio(){
 bool Fecha::getBool(){
     return cargada;
 }
+
+void Fecha::CargarActual(){
+    time_t ahora = time(0);
+    tm *ltm = localtime(&ahora);
+
+    dia = ltm->tm_mday;
+    mes = ltm->tm_mon+1;
+    anio = ltm->tm_year+1900;
+}
+
 void Fecha::Cargar(){
     cargada=true;
     cout<<"Dia: ";

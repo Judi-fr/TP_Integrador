@@ -3,6 +3,7 @@
 #include <cstring>
 #include "Fecha.h"
 #include "3_clsCancion.h"
+#include "Hora.h"
 #include "1_clsSuscripcion.h"
 
 class Accesos{
@@ -10,9 +11,9 @@ class Accesos{
         int idCancion;
         int idSuscripcion;
         Fecha diaEscuchado;
-
+        Hora horaEscuchada;
     public:
-        Accesos(int , int , Fecha );
+        Accesos(int , int , Fecha ,Hora );
         Accesos();
         void setCancion(int song);
         void setSuscriptor(int sus);
@@ -20,6 +21,7 @@ class Accesos{
         int getSuscripcion();
         int getCanciones();
         Fecha getFecha();
+        Hora getHora();
         void Mostrar();
 
 };

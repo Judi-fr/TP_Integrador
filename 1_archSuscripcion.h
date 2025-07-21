@@ -11,7 +11,10 @@ class Archivo_Suscripcion{
 
         Suscripcion leerSuscripcion(int posicion);
         void append(Suscripcion suscripcion);
+        void bajaLogica(int );
         int CantidadRegis_susc();
+        void Actualizar(int ,Suscripcion );
+        int SaberPocision(Suscripcion sus);
         Suscripcion BuscarPorId(int idBuscado);
 
 };

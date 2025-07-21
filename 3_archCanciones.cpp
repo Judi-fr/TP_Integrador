@@ -10,6 +10,34 @@ Archivo_Cancion::Archivo_Cancion(){
 
 }
 
+///BAJA-LOGICA//////////////////////////////////////////////////////////
+void Archivo_Cancion::bajaLogica(int id){
+    Archivo_Cancion archivoCanc;
+    Cancion canc;
+    bool encontrado=false;
+    int cantidad=CantidadRegis_canc();
+
+    for(int i=0;i<cantidad;i++){
+        canc=leerCancion(i);
+        if(canc.getNumero()==id && canc.getBajaLogica()){
+            canc.setBajaLogica(false);
+            encontrado=true;
+            cout<<"La cancion a sido dada de Baja"<<endl;
+            break;
+        }
+        if(canc.getNumero()==id && canc.getBajaLogica()==false){
+            canc.setBajaLogica(true);
+            encontrado=true;
+            cout<<"La cancion a sido dada de Alta"<<endl;
+            break;
+        }
+    }
+    if(encontrado==true){
+        int pocision=archivoCanc.SaberPocision(canc);
+        archivoCanc.Actualizar(pocision, canc);
+    }else{cout<<"El id ingresado no Pertenece a ninguna cancion";}
+}
+
 ///APPEND///////////////////////////////////////////////////////////////
 void Archivo_Cancion::append(Cancion cancion){
     FILE *pArchivo = fopen("Canciones.dat","ab");
@@ -54,7 +82,7 @@ int Archivo_Cancion::CantidadRegis_canc(){
 }
 
 ///MODIFICAR-REGISTRO/////////////////////////////////////////////////////
-void Archivo_Cancion::Actualizar_reproducciones(int posicion,Cancion nuevaCancion){
+void Archivo_Cancion::Actualizar(int posicion,Cancion nuevaCancion){
     FILE *pFile = fopen("Canciones.dat","rb+");
     if (pFile == nullptr) {
         cout<<"Error al abrir el archivo."<<endl;
@@ -96,7 +124,8 @@ Cancion Archivo_Cancion::BuscarPorId(int idBuscado){
             return cancion;
         }
     }
-
     fclose(archivo);
+    cout<<"No se encontro la cancion.";
+    noEncontrado.setNumero(-1);
     return noEncontrado;
 }

@@ -10,10 +10,11 @@ class Archivo_Cancion{
         Archivo_Cancion(std::string nombre);
         Archivo_Cancion();
 
+        void bajaLogica(int id);
         void append(Cancion cancion);
         int CantidadRegis_canc();
-        Cancion leerCancion(int pocision);
-        void Actualizar_reproducciones(int posicion,Cancion nuevaCancion);
+        Cancion leerCancion(int posicion);
+        void Actualizar(int posicion,Cancion nuevaCancion);
         int SaberPocision(Cancion song);
         Cancion BuscarPorId(int idBuscado);
 };

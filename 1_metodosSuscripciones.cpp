@@ -5,6 +5,7 @@
 #include <string>
 #include "1_clsSuscripcion.h"
 #include "Fecha.h"
+#include <limits>
 
 using namespace std;
 
@@ -41,6 +42,9 @@ void Suscripcion::setLogeado(bool valor){
 void Suscripcion::setFechaNac(Fecha x){
     fechaNacimiento = x;
 }
+void Suscripcion::setBajaLogica(bool x){
+    BajaLogica=x;
+}
 
 ///getters/////////////////////////////////////////
 int Suscripcion::getIdentificador(){
@@ -70,25 +74,32 @@ bool Suscripcion::getLogeado(){
 Fecha Suscripcion::getFecha(){
     return fechaNacimiento;
 }
+bool Suscripcion::getBajaLogica(){
+    return BajaLogica;
+}
 
 void Suscripcion::Cargar(){
-    cout<<"INGRESA TU EMAIL: "<<flush;
     cin.ignore();
-    cin.getline(email,50);
-    cout<<"INGRESA CONTRASENIA: ";
+    cout << "INGRESA TU EMAIL: ";
+    cin.getline(email, 50);
+
+    cout << "INGRESA CONTRASENIA: ";
+    cin.getline(contrasenia, 50);
+
+    cout << "INGRESA TU DNI: " << flush;
+    cin >> dni;
+
     cin.ignore();
-    cin.getline(contrasenia,50);
-    cout<<"INGRESA TU DNI: ";
-    cin>>dni;
-    cout<<"INGRESA TU NOMBRE: ";
-    cin.ignore();
-    cin.getline(nombre,30);
-    cout<<"INGRESA TU APELLIDO: "<<flush;
-    cin.ignore();
-    cin.getline(apellido,30);
-    cout<<"INGRESA TU TELEFONO: "<<flush;
-    cin>>telefono;
-    cout<<"INGRESA TU FECHA DE NACIMIENTO: "<<endl;
+    cout << "INGRESA TU NOMBRE: " << flush;
+    cin.getline(nombre, 30);
+
+    cout << "INGRESA TU APELLIDO: " << flush;
+    cin.getline(apellido, 30);
+
+    cout << "INGRESA TU TELEFONO: " << flush;
+    cin >> telefono;
+
+    cout << "INGRESA TU FECHA DE NACIMIENTO: " << endl;
     fechaNacimiento.Cargar();
 }
 void Suscripcion::cargarEmail(){
@@ -96,7 +107,6 @@ void Suscripcion::cargarEmail(){
     cin.getline(email,50);
 }
 void Suscripcion::cargarContrasenia(){
-    cin.ignore();
     cin.getline(contrasenia,50);
 }
 

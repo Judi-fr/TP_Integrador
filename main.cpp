@@ -6,20 +6,13 @@
 #include "3_archCanciones.h"
 #include "2_clsArchivos.h"
 #include "rlutil.h"
+#include "1_archSuscripcion.h"
 
 
 using namespace std;
 
 void switchReportes();
 Suscripcion switchAdm(Suscripcion );
-
-/**
-ABML para todos los archivos.
-ALTA
-BAJA
-MODIFICACION
-LISTADO
-*/
 
 int main()
 {
@@ -29,29 +22,17 @@ int main()
 
     while(true){
         int opcion;
-        if(sus.getLogeado()== false){ ///SI NO ESTA LOGEADO SE MUESTRA EL MENU 1
+        if(sus.getLogeado()== false){
             Menu1();
             sus=switch1(sus);
         }
         if(sus.getLogeado()){
             if(strcmp(sus.getEmail(),admin)==0){
-                MenuAdmin();Fecha&
+                MenuAdmin();
                 sus=switchAdm(sus);
 
             }else{
-                if (fechaHoy.getBool()== false){
-                    cout<<"Ingrese la fecha de hoy"<<endl;
-                    system("pause");
-                    system("cls");
-                    fechaHoy.Cargar();
-                    if(fechaHoy.getAnio()!=2025){
-                        system("cls");
-                        cout<<"ERROR: El anio debe ser el actual, 2025. Volve a intentarlo."<<endl;
-                        rlutil::anykey();
-                        system("cls");
-                        fechaHoy.Cargar();
-                    }
-                }
+                fechaHoy.CargarActual();
                 system("cls");
                 rlutil::showcursor();
                 Menu2();
@@ -130,18 +111,27 @@ Suscripcion switch2(Suscripcion sus, Fecha fechaHoy){
         case 1:
             mi_perfil(sus);                    ///SWITCH 2
             break;
-        case 2:
+        case 2:{
+            Modif_susc(sus);
+            Archivo_Suscripcion archivo;
+            sus=archivo.BuscarPorId(sus.getIdentificador());
+            system("pause");
+            system("cls");
+            break;}
+        case 3:
             listaCanciones(sus,fechaHoy);
             system("cls");
             break;
-        case 3:
-            historial(sus);
+        case 4:{
+            int contador=historial(sus);
+            dibujar_grilla(contador);
+            switchHistorial();
             rlutil::hidecursor();
             rlutil::anykey();                  ///SWITCH 2
             rlutil::showcursor();
             system("cls");
-            break;
-        case 4:
+            break;}
+        case 5:
             sus=vacia;
             system("cls");
             break;
@@ -174,9 +164,47 @@ Suscripcion switchAdm(Suscripcion sus){
             archivo.append(nuevaCancion);
             cout<<"Canción agregada exitosamente."<<endl;
             system("pause");
+            system("cls");
             break;
         }
-        case 3:
+        case 3:{
+            Archivo_Cancion archivo;
+            int id;
+            cout<<"Ingrese el numero de id de la cancion que quieres dar de Baja o Alta. ";
+            cin>>id;
+            archivo.bajaLogica(id);
+            system("pause");
+            system("cls");
+            break;}
+        case 4:{
+            Archivo_Suscripcion archivo;
+            int id;
+            cout<<"Ingrese el numero de id de la suscripcion que quieres dar de Baja o Alta. ";
+            cin>>id;
+            archivo.bajaLogica(id);
+            system("pause");
+            system("cls");
+            break;}
+        case 5:{
+            Modif_canc();
+            system("pause");
+            system("cls");
+            break;}
+        case 6:{
+            Suscripcion vacia;
+            Modif_susc(vacia);
+            system("pause");
+            system("cls");
+            break;}
+        case 7:
+            listar_canc();
+            system("cls");
+            break;
+        case 8:
+            listar_sus();
+            system("cls");
+            break;
+        case 9:
             sus=vacia;
             return sus;
             break;
@@ -184,7 +212,9 @@ Suscripcion switchAdm(Suscripcion sus){
             cout<<"Opción no válida. Intente nuevamente."<<endl;
             system("pause");
             break;
+
     }
+    return sus;
 }
 ///SWITCH-REPORTES//////////////////////////////////////////////
 void switchReportes(){
@@ -197,39 +227,30 @@ void switchReportes(){
         case 1:
             reporte1();
             system("cls");
-            MenuReportes();
-            switchReportes();
             break;
         case 2:
             reporte2();
             system("cls");
-            MenuReportes();
-            switchReportes();
             break;
         case 3:
             reporte3();
             system("cls");
-            MenuReportes();
-            switchReportes();
             break;
         case 4:
             reporte4();
             system("cls");
-            MenuReportes();
-            switchReportes();
             break;
         case 5:
             reporte5();
+            system("pause");
             system("cls");
-            MenuReportes();
-            switchReportes();
-            break;
-        case 6:
             break;
         default:
             cout << "Opción no válida. Intente nuevamente." << endl;
             system("pause");
+            break;
     }
 }
+
 
 

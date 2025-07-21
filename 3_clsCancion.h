@@ -14,6 +14,7 @@ class Cancion{
         char interprete[30];
         Fecha fechaPublicacion;
         bool cargado;
+        bool bajaLogica;
 
     public:
         Cancion();
@@ -23,14 +24,18 @@ class Cancion{
         void setNombre(const char* );
         void setAutor(const char* );
         void setInterprete(const char* );
+        void setFechaPub(Fecha );
         void setCargado(bool );
-        bool getCargado();
+        void setBajaLogica(bool );
 
         int getNumero();
         int getReproducciones();
         const char* getNombre();
         const char* getAutor();
         const char* getInterprete();
+        Fecha getFechaPub();
+        bool getCargado();
+        bool getBajaLogica();
 
         void cargarCancion();
         void Mostrar();

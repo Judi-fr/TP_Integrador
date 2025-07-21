@@ -12,7 +12,9 @@ Hora::Hora(int _hora,int _minuto,int _segundo){
     minuto=_minuto;
     segundo=_segundo;
 }
+Hora::Hora(){
 
+}
 void Hora::setHora(int x){
     hora=x;
 }
@@ -42,7 +44,6 @@ void Hora::Cargar(){
 }
 
 
-void Hora::Mostrar(int x=0,int y=0){
-    rlutil::locate(1+x,1+y);
+void Hora::Mostrar(){
     cout<<hora<<":"<<minuto<<":"<<segundo;
 }

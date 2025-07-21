@@ -26,8 +26,14 @@ void Cancion::setAutor(const char *x){
 void Cancion::setInterprete(const char *x){
     strcpy(interprete,x);
 }
+void Cancion::setFechaPub(Fecha x) {
+        fechaPublicacion = x;
+}
 void Cancion::setCargado(bool x){
     cargado=x;
+}
+void Cancion::setBajaLogica(bool x){
+    bajaLogica=x;
 }
 
 int Cancion::getNumero(){
@@ -45,20 +51,26 @@ const char* Cancion::getAutor(){
 const char* Cancion::getInterprete(){
     return interprete;
 }
+Fecha Cancion::getFechaPub(){
+    return fechaPublicacion;
+}
+
 bool Cancion::getCargado(){
     return cargado;
 }
+bool Cancion::getBajaLogica(){
+    return bajaLogica;
+}
 void Cancion::cargarCancion(){
     Archivo_Cancion archivo;
+    bajaLogica=true;
     numero=archivo.CantidadRegis_canc()+1;
     cout<<"NOMBRE"<<endl;
     cin.ignore();
     cin.getline(nombre,30);
     cout<<"AUTOR"<<endl;
-    cin.ignore();
     cin.getline(autor,30);
     cout<<"INTERPRETE"<<endl;
-    cin.ignore();
     cin.getline(interprete,30);
     reproducciones=0;
 }
